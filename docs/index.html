@@ -144,7 +144,13 @@
       <div class="timeline-bar" id="sheet-timeline"></div>
     </div>
 
-    <ul id="sheet-slots" class="px-5 py-4 space-y-2"></ul>
+    <ul id="sheet-slots" class="px-5 pt-4 pb-2 space-y-2"></ul>
+
+    <!-- Full weekly schedule -->
+    <div class="px-5 pb-5 border-t border-border pt-4">
+      <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Full weekly schedule</p>
+      <ul id="sheet-weekly" class="space-y-2"></ul>
+    </div>
   </div>
 
   <!-- ── Error banner ──────────────────────────────────────────── -->
@@ -394,7 +400,7 @@
       }
     }
 
-    // Slot list
+    // Slot list (selected day)
     const ul = document.getElementById('sheet-slots');
     ul.innerHTML = '';
     if (!daySlots.length) {
@@ -413,6 +419,31 @@
           ${isNow ? '<span class="text-red-400 text-xs font-semibold">now</span>' : ''}
         `;
         ul.appendChild(li);
+      });
+    }
+
+    // Full weekly schedule — show every slot across all days, sorted by start time
+    const DAY_ORDER = ['M','T','W','R','F','S','U'];
+    const DAY_LABEL = {M:'Mon',T:'Tue',W:'Wed',R:'Thu',F:'Fri',S:'Sat',U:'Sun'};
+    const weekly = document.getElementById('sheet-weekly');
+    weekly.innerHTML = '';
+    const allSlots = (r.slots || []).slice().sort((a,b) => toMin(a.start) - toMin(b.start));
+    if (!allSlots.length) {
+      weekly.innerHTML = `<li class="text-gray-500 text-sm">No classes scheduled this room.</li>`;
+    } else {
+      allSlots.forEach(s => {
+        const dayStr = s.days
+          .slice()
+          .sort((a,b) => DAY_ORDER.indexOf(a) - DAY_ORDER.indexOf(b))
+          .map(d => DAY_LABEL[d] || d)
+          .join(' · ');
+        const li = document.createElement('li');
+        li.className = 'flex items-center justify-between rounded-lg px-3 py-2 text-sm bg-surface';
+        li.innerHTML = `
+          <span class="font-mono text-white">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span>
+          <span class="text-gray-400 text-xs">${dayStr}</span>
+        `;
+        weekly.appendChild(li);
       });
     }
   }
