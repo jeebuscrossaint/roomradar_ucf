@@ -58,14 +58,14 @@
   <!-- ── Filters ───────────────────────────────────────────────── -->
   <div class="sticky top-[57px] z-20 bg-surface border-b border-border px-4 py-3 flex flex-wrap gap-2">
 
-    <!-- Room search -->
-    <input id="f-search" type="text" placeholder="Search room… e.g. ENG2 0302"
-      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold w-48"
-      autocomplete="off" spellcheck="false" />
-
     <select id="f-building"
       class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold">
       <option value="">All buildings</option>
+    </select>
+
+    <select id="f-room"
+      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold">
+      <option value="">All rooms</option>
     </select>
 
     <select id="f-day"
@@ -211,67 +211,57 @@
       });
   }
 
-  // ── search rooms (by partial building+room or partial room number) ─────────
-  function searchRooms(q) {
-    q = q.trim().toUpperCase();
-    if (!q) return null; // null = no search active
-
-    const parts = q.split(/\s+/);
-
-    // "ENG2 0302" — two tokens: exact building + partial room
-    if (parts.length >= 2) {
-      const bld = parts[0], rm = parts.slice(1).join(' ');
-      return Object.values(allRooms).filter(r =>
-        r.building.toUpperCase() === bld && r.room.toUpperCase().includes(rm)
-      );
-    }
-
-    const token = parts[0];
-    // pure digits → partial room number
-    if (/^\d+$/.test(token)) {
-      return Object.values(allRooms).filter(r => r.room.toUpperCase().includes(token));
-    }
-    // otherwise → building prefix
-    return Object.values(allRooms).filter(r => r.building.toUpperCase().startsWith(token));
+  // ── populate room dropdown based on selected building ─────────────────────
+  function populateRooms(building) {
+    const sel = document.getElementById('f-room');
+    sel.innerHTML = '<option value="">All rooms</option>';
+    if (!building) return;
+    const rooms = Object.values(allRooms)
+      .filter(r => r.building === building)
+      .map(r => r.room)
+      .sort();
+    rooms.forEach(rm => {
+      const opt = document.createElement('option');
+      opt.value = rm;
+      opt.textContent = rm;
+      sel.appendChild(opt);
+    });
   }
 
   // ── render results ─────────────────────────────────────────────────────────
   function render() {
     const building  = document.getElementById('f-building').value;
+    const roomSel   = document.getElementById('f-room').value;
     const dayCode   = document.getElementById('f-day').value;
     const timeVal   = document.getElementById('f-time').value;
     const minFree   = parseInt(document.getElementById('f-minfree').value) || 0;
-    const searchQ   = document.getElementById('f-search').value;
     const queryMin  = toMin(timeVal);
 
     const dayLabel  = DAY_NAMES[dayCode] || dayCode;
     const timeLabel = toAmPm(queryMin);
 
-    const searched = searchRooms(searchQ);
-
     let displayRooms;
-    let isSearchMode = searched !== null;
+    let isRoomMode = !!roomSel; // specific room selected
 
-    if (isSearchMode) {
-      // Search mode: show searched rooms, annotated with free/occupied status
-      displayRooms = searched
-        .filter(r => !building || r.building === building)
-        .map(r => {
-          const todaySlots = r.slots.filter(s => s.days.includes(dayCode));
-          const occ = todaySlots.find(s => toMin(s.start) <= queryMin && queryMin < toMin(s.end));
-          if (occ) {
-            return { ...r, occupied: true, freeUntil: toAmPm(toMin(occ.end)), duration: null };
-          }
+    if (isRoomMode) {
+      // Show that one room with free/occupied status
+      const key = `${building}-${roomSel}`;
+      const r = allRooms[key] || Object.values(allRooms).find(r => r.building === building && r.room === roomSel);
+      if (!r) { displayRooms = []; }
+      else {
+        const todaySlots = r.slots.filter(s => s.days.includes(dayCode));
+        const occ = todaySlots.find(s => toMin(s.start) <= queryMin && queryMin < toMin(s.end));
+        if (occ) {
+          displayRooms = [{ ...r, occupied: true, freeUntil: toAmPm(toMin(occ.end)), duration: null }];
+        } else {
           const future = todaySlots.map(s => toMin(s.start)).filter(t => t > queryMin).sort((a,b)=>a-b);
           const nextMin = future.length ? future[0] : null;
-          return { ...r, occupied: false, freeUntil: nextMin !== null ? toAmPm(nextMin) : 'End of day', duration: nextMin !== null ? nextMin - queryMin : null };
-        })
-        .sort((a,b) => (a.building+a.room).localeCompare(b.building+b.room));
-
-      document.getElementById('status').textContent = `Search results — ${dayLabel} at ${timeLabel}`;
-      document.getElementById('result-count').textContent = `${displayRooms.length} room${displayRooms.length !== 1 ? 's' : ''}`;
+          displayRooms = [{ ...r, occupied: false, freeUntil: nextMin !== null ? toAmPm(nextMin) : 'End of day', duration: nextMin !== null ? nextMin - queryMin : null }];
+        }
+      }
+      document.getElementById('status').textContent = `${building} ${roomSel} — ${dayLabel} at ${timeLabel}`;
+      document.getElementById('result-count').textContent = '';
     } else {
-      // Free rooms mode
       displayRooms = findFree(dayCode, queryMin, building, minFree);
       document.getElementById('status').textContent = `Free rooms — ${dayLabel} at ${timeLabel}`;
       document.getElementById('result-count').textContent = `${displayRooms.length} room${displayRooms.length !== 1 ? 's' : ''}`;
@@ -287,22 +277,17 @@
 
     displayRooms.forEach(r => {
       const card = document.createElement('button');
+      const isOccupied = isRoomMode && r.occupied;
       card.className = [
         'bg-card border rounded-xl p-3 text-left',
         'hover:bg-[#242424] transition-all',
         'focus:outline-none focus:ring-1 focus:ring-gold',
         'flex flex-col gap-1',
-        isSearchMode && r.occupied ? 'border-red-800/60' : 'border-border hover:border-gold/60',
+        isOccupied ? 'border-red-800/60' : 'border-border hover:border-gold/60',
       ].join(' ');
 
-      let badge, badgeColor;
-      if (isSearchMode && r.occupied) {
-        badge = 'occupied';
-        badgeColor = 'text-red-400';
-      } else {
-        badge = fmtDuration(r.duration);
-        badgeColor = 'text-green-400';
-      }
+      const badge      = isOccupied ? 'occupied' : fmtDuration(r.duration);
+      const badgeColor = isOccupied ? 'text-red-400' : 'text-green-400';
 
       card.innerHTML = `
         <div class="flex items-start justify-between gap-1">
@@ -312,7 +297,7 @@
           </span>
         </div>
         <span class="font-mono text-lg font-bold leading-none">${r.room}</span>
-        <span class="text-xs text-gray-400 mt-0.5">${isSearchMode && r.occupied ? 'free at ' : 'until '}${r.freeUntil}</span>
+        <span class="text-xs text-gray-400 mt-0.5">${isOccupied ? 'free at ' : 'until '}${r.freeUntil}</span>
       `;
 
       card.addEventListener('click', () => openSheet(r, dayCode, queryMin));
@@ -461,11 +446,14 @@
     document.getElementById('f-day').value  = currentDayCode();
     document.getElementById('f-time').value = currentHHMM();
 
-    ['f-building','f-day','f-time','f-minfree'].forEach(id =>
+    document.getElementById('f-building').addEventListener('change', () => {
+      populateRooms(document.getElementById('f-building').value);
+      render();
+    });
+    ['f-room','f-day','f-minfree'].forEach(id =>
       document.getElementById(id).addEventListener('change', render)
     );
     document.getElementById('f-time').addEventListener('input', render);
-    document.getElementById('f-search').addEventListener('input', render);
 
     document.getElementById('btn-now').addEventListener('click', () => {
       document.getElementById('f-day').value  = currentDayCode();
