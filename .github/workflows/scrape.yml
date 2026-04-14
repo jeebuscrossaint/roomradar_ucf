@@ -1,0 +1,42 @@
+name: Scrape UCF Schedule
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday 8 AM UTC — tweak per semester
+  workflow_dispatch:        # Manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Chrome
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Install Python deps
+        run: pip install -r ucf-cli/requirements.txt
+
+      - name: Scrape UCF
+        run: cd ucf-cli && python main.py refresh --workers 4
+
+      - name: Copy data to docs
+        run: cp ucf-cli/data/schedule.json docs/schedule.json
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/schedule.json
+          git diff --staged --quiet || git commit -m "chore: update UCF schedule data [skip ci]"
+          git push
