@@ -303,16 +303,18 @@ function render() {
     else if(!r.freeUntil) desc = 'No more classes today';
     else                desc = `Free for ${fmtDur(r.duration)} · next at ${r.freeUntil}`;
 
+    const durLabel = isOcc
+      ? `<span class="text-[11px] font-semibold text-red">occupied</span>`
+      : `<span class="text-[11px] font-semibold text-green">${r.freeUntil ? fmtDur(r.duration) : 'all day'}</span>`;
+
     btn.innerHTML = `
-      <div class="flex items-baseline justify-between gap-1">
-        <span class="font-mono font-bold text-[18px] leading-none">${r.room}</span>
-        <span class="text-[11px] text-tx2">${r.building}</span>
+      <div class="flex items-start justify-between gap-1">
+        <span class="text-[12px] text-tx2 font-medium">${r.building}</span>
+        ${durLabel}
       </div>
-      <span class="pill ${isOcc?'pill-r':'pill-g'}">
-        <span class="dot ${isOcc?'dot-r':'dot-g'}"></span>${isOcc?'Occupied':'Free'}
-      </span>
+      <span class="font-mono font-bold text-[20px] leading-none">${r.room}</span>
       <div class="mini-tl w-full">${buildMiniTl(r,day,qMin)}</div>
-      <span class="text-[11px] text-tx2 leading-snug">${desc}</span>
+      <span class="text-[11px] text-tx2">${isOcc ? `free at ${r.freeUntil}` : r.freeUntil ? `until ${r.freeUntil}` : 'no more classes today'}</span>
     `;
     btn.addEventListener('click', ()=>openSheet(r,day,qMin));
     grid.appendChild(btn);
