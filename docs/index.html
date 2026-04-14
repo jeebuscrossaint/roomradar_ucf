@@ -30,7 +30,7 @@
     ::-webkit-scrollbar-track { background: #1e1e1e; }
     ::-webkit-scrollbar-thumb { background: #3a3a3a; border-radius: 3px; }
     .timeline-bar { height: 6px; border-radius: 3px; background: #2a2a2a; overflow: hidden; position: relative; }
-    .timeline-slot { position: absolute; top: 0; height: 100%; background: #FFC904; border-radius: 2px; }
+    .timeline-slot { position: absolute; top: 0; height: 100%; background: #ef4444; border-radius: 2px; }
     .sheet-enter  { animation: slideUp .25s ease-out; }
     @keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     select option { background: #1e1e1e; color: #fff; }
@@ -301,10 +301,7 @@
         badgeColor = 'text-red-400';
       } else {
         badge = fmtDuration(r.duration);
-        badgeColor = r.duration === null ? 'text-green-400'
-          : r.duration >= 120 ? 'text-green-400'
-          : r.duration >= 60  ? 'text-yellow-300'
-          : 'text-orange-400';
+        badgeColor = 'text-green-400';
       }
 
       card.innerHTML = `
@@ -413,11 +410,11 @@
         const isPast = isToday && eMin <= nowMin;
         const li = document.createElement('li');
         li.className = `flex items-center justify-between rounded-lg px-3 py-2 text-sm ${
-          isNow ? 'bg-gold/10 border border-gold/30' : 'bg-surface'
+          isNow ? 'bg-red-950/60 border border-red-800/50' : 'bg-surface'
         } ${isPast ? 'opacity-40' : ''}`;
         li.innerHTML = `
           <span class="font-mono">${toAmPm(sMin)} – ${toAmPm(eMin)}</span>
-          ${isNow ? '<span class="text-gold text-xs font-semibold">now</span>' : ''}
+          ${isNow ? '<span class="text-red-400 text-xs font-semibold">now</span>' : ''}
         `;
         ul.appendChild(li);
       });
