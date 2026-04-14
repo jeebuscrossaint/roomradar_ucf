@@ -3,73 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RoomRadar UCF</title>
+  <title>RoomRadar · UCF</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            gold:     '#FFC904',
-            'gold-2': '#e6b400',
-            surface:  '#141414',
-            card:     '#1e1e1e',
-            border:   '#2a2a2a',
+            bg:      '#1c1c1e',
+            surface: '#2c2c2e',
+            raised:  '#3a3a3c',
+            line:    'rgba(255,255,255,0.1)',
+            tx:      '#ffffff',
+            tx2:     '#98989e',
+            green:   '#30d158',
+            red:     '#ff453a',
+            blue:    '#0a84ff',
           },
           fontFamily: {
-            sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-            mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
+            sans: ['-apple-system','BlinkMacSystemFont','SF Pro Display','Segoe UI','sans-serif'],
+            mono: ['ui-monospace','SF Mono','SFMono-Regular','monospace'],
           },
         },
       },
     };
   </script>
   <style>
-    html { background: #141414; }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #1e1e1e; }
-    ::-webkit-scrollbar-thumb { background: #3a3a3a; border-radius: 3px; }
-    .timeline-bar { height: 6px; border-radius: 3px; background: #2a2a2a; overflow: hidden; position: relative; }
-    .timeline-slot { position: absolute; top: 0; height: 100%; background: #ef4444; border-radius: 2px; }
-    .sheet-enter  { animation: slideUp .25s ease-out; }
-    @keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    select option { background: #1e1e1e; color: #fff; }
-    .day-tab { cursor: pointer; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; transition: background .15s, color .15s; }
-    .day-tab.active { background: #FFC904; color: #000; }
-    .day-tab:not(.active) { color: #9ca3af; }
-    .day-tab:not(.active):hover { color: #fff; }
+    html, body { background: #1c1c1e; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #48484a; border-radius: 10px; }
+    select option { background: #2c2c2e; color: #fff; }
+
+    .glass {
+      background: rgba(28,28,30,0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .card {
+      background: #2c2c2e;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      transition: background .15s, border-color .15s;
+    }
+    .card:hover { background: #3a3a3c; border-color: rgba(255,255,255,0.14); }
+    .card.occupied { border-color: rgba(255,69,58,0.25); }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 2px 9px; border-radius: 20px; font-size: 0.72rem; font-weight: 600;
+    }
+    .pill-green { background: rgba(48,209,88,0.15);  color: #30d158; }
+    .pill-red   { background: rgba(255,69,58,0.15);  color: #ff453a; }
+
+    .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    .dot-green { background: #30d158; }
+    .dot-red   { background: #ff453a; }
+
+    .seg-ctrl { display: flex; background: #3a3a3c; border-radius: 9px; padding: 2px; gap: 1px; }
+    .seg-btn {
+      flex: 1; text-align: center; padding: 4px 8px; border-radius: 7px;
+      font-size: 0.72rem; font-weight: 600; cursor: pointer; color: #98989e;
+      transition: background .12s, color .12s;
+    }
+    .seg-btn.active { background: #636366; color: #fff; }
+
+    .tl-bar { height: 5px; border-radius: 4px; background: #3a3a3c; overflow: hidden; position: relative; }
+    .tl-slot { position: absolute; top: 0; height: 100%; background: #ff453a; border-radius: 3px; }
+
+    .sheet-enter { animation: slideUp .22s cubic-bezier(.4,0,.2,1); }
+    @keyframes slideUp { from { transform: translateY(100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
+
+    input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(0.6); }
   </style>
 </head>
 
-<body class="bg-surface text-white min-h-screen font-sans antialiased">
+<body class="text-tx min-h-screen font-sans antialiased">
 
-  <!-- ── Header ────────────────────────────────────────────────── -->
-  <header class="sticky top-0 z-30 bg-surface border-b border-border px-4 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <span class="text-gold text-xl font-bold tracking-tight">RoomRadar</span>
-      <span class="text-xs font-semibold bg-gold text-black px-2 py-0.5 rounded-full">UCF</span>
+  <!-- Header -->
+  <header class="glass sticky top-0 z-30 border-b border-line px-5 py-3 flex items-center justify-between">
+    <div>
+      <span class="text-white text-[17px] font-semibold tracking-tight">RoomRadar</span>
+      <span class="text-tx2 text-[13px] ml-2">UCF</span>
     </div>
     <div class="text-right">
-      <div id="live-time" class="text-sm font-mono text-white"></div>
-      <div id="data-age"  class="text-xs text-gray-500"></div>
+      <div id="live-time" class="text-[13px] font-mono text-tx2"></div>
+      <div id="data-age"  class="text-[11px] text-tx2/60 mt-0.5"></div>
     </div>
   </header>
 
-  <!-- ── Filters ───────────────────────────────────────────────── -->
-  <div class="sticky top-[57px] z-20 bg-surface border-b border-border px-4 py-3 flex flex-wrap gap-2">
+  <!-- Filters -->
+  <div class="glass sticky top-[49px] z-20 border-b border-line px-5 py-3 flex flex-wrap gap-2 items-center">
 
     <select id="f-building"
-      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold">
+      class="bg-surface text-tx text-[13px] rounded-[9px] px-3 py-[7px] border border-line focus:outline-none focus:border-blue/50 appearance-none cursor-pointer">
       <option value="">All buildings</option>
     </select>
 
     <select id="f-room"
-      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold">
+      class="bg-surface text-tx text-[13px] rounded-[9px] px-3 py-[7px] border border-line focus:outline-none focus:border-blue/50 appearance-none cursor-pointer">
       <option value="">All rooms</option>
     </select>
 
     <select id="f-day"
-      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold">
+      class="bg-surface text-tx text-[13px] rounded-[9px] px-3 py-[7px] border border-line focus:outline-none focus:border-blue/50 appearance-none cursor-pointer">
       <option value="M">Monday</option>
       <option value="T">Tuesday</option>
       <option value="W">Wednesday</option>
@@ -80,133 +118,135 @@
     </select>
 
     <input id="f-time" type="time"
-      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold" />
+      class="bg-surface text-tx text-[13px] rounded-[9px] px-3 py-[7px] border border-line focus:outline-none focus:border-blue/50 cursor-pointer" />
 
     <select id="f-minfree"
-      class="bg-card border border-border text-white text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-gold">
+      class="bg-surface text-tx text-[13px] rounded-[9px] px-3 py-[7px] border border-line focus:outline-none focus:border-blue/50 appearance-none cursor-pointer">
       <option value="0">Any duration</option>
       <option value="30">30 min+</option>
-      <option value="60">1 hour+</option>
-      <option value="90">1.5 hours+</option>
-      <option value="120">2 hours+</option>
+      <option value="60">1 hr+</option>
+      <option value="90">1.5 hr+</option>
+      <option value="120">2 hr+</option>
     </select>
 
     <button id="btn-now"
-      class="bg-gold text-black text-sm font-semibold rounded-lg px-4 py-2 hover:bg-gold-2 transition-colors">
+      class="bg-blue text-white text-[13px] font-semibold rounded-[9px] px-4 py-[7px] hover:bg-blue/80 transition-colors">
       Now
     </button>
   </div>
 
-  <!-- ── Status bar ────────────────────────────────────────────── -->
-  <div class="px-4 pt-4 pb-2 flex items-center justify-between">
-    <p id="status" class="text-sm text-gray-400">Loading…</p>
-    <p id="result-count" class="text-sm text-gray-500"></p>
+  <!-- Status bar -->
+  <div class="px-5 pt-4 pb-2 flex items-center justify-between">
+    <p id="status" class="text-[13px] text-tx2">Loading…</p>
+    <p id="result-count" class="text-[12px] text-tx2/60"></p>
   </div>
 
-  <!-- ── Results ───────────────────────────────────────────────── -->
+  <!-- Results grid -->
   <main id="results"
-    class="px-4 pb-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+    class="px-5 pb-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
   </main>
 
-  <!-- ── Detail sheet ──────────────────────────────────────────── -->
-  <div id="sheet-backdrop"
-    class="hidden fixed inset-0 z-40 bg-black/60"
-    onclick="closeSheet()"></div>
+  <!-- Sheet backdrop -->
+  <div id="sheet-backdrop" class="hidden fixed inset-0 z-40 bg-black/50" onclick="closeSheet()"></div>
 
+  <!-- Detail sheet -->
   <div id="sheet"
-    class="hidden fixed bottom-0 left-0 right-0 z-50 bg-card rounded-t-2xl border-t border-border max-h-[85vh] overflow-y-auto sheet-enter">
+    class="hidden fixed bottom-0 left-0 right-0 z-50 bg-[#2c2c2e] rounded-t-[20px] border-t border-line max-h-[88vh] overflow-y-auto sheet-enter">
+
+    <!-- Drag handle -->
+    <div class="flex justify-center pt-3 pb-1">
+      <div class="w-9 h-1 rounded-full bg-[#636366]"></div>
+    </div>
 
     <!-- Sheet header -->
-    <div class="flex items-center justify-between px-5 pt-5 pb-3 border-b border-border">
+    <div class="flex items-start justify-between px-5 pt-3 pb-4 border-b border-line">
       <div>
-        <h2 id="sheet-title" class="text-lg font-bold font-mono"></h2>
-        <p id="sheet-status-line" class="text-sm mt-0.5"></p>
+        <h2 id="sheet-title" class="text-[22px] font-bold font-mono text-tx tracking-tight"></h2>
+        <p id="sheet-status-line" class="text-[14px] mt-1"></p>
       </div>
-      <button onclick="closeSheet()" class="text-gray-400 hover:text-white text-2xl leading-none ml-4">&times;</button>
+      <button onclick="closeSheet()"
+        class="text-tx2 hover:text-tx text-[22px] leading-none mt-1 w-7 h-7 flex items-center justify-center rounded-full hover:bg-raised transition-colors">
+        ×
+      </button>
     </div>
 
     <!-- Day tabs -->
-    <div class="px-5 pt-3 pb-2 flex gap-1 flex-wrap border-b border-border">
-      <span id="day-tab-M" class="day-tab" onclick="switchSheetDay('M')">Mon</span>
-      <span id="day-tab-T" class="day-tab" onclick="switchSheetDay('T')">Tue</span>
-      <span id="day-tab-W" class="day-tab" onclick="switchSheetDay('W')">Wed</span>
-      <span id="day-tab-R" class="day-tab" onclick="switchSheetDay('R')">Thu</span>
-      <span id="day-tab-F" class="day-tab" onclick="switchSheetDay('F')">Fri</span>
-      <span id="day-tab-S" class="day-tab" onclick="switchSheetDay('S')">Sat</span>
-      <span id="day-tab-U" class="day-tab" onclick="switchSheetDay('U')">Sun</span>
+    <div class="px-5 pt-4">
+      <div class="seg-ctrl" id="day-tabs">
+        <div id="day-tab-M" class="seg-btn" onclick="switchSheetDay('M')">Mon</div>
+        <div id="day-tab-T" class="seg-btn" onclick="switchSheetDay('T')">Tue</div>
+        <div id="day-tab-W" class="seg-btn" onclick="switchSheetDay('W')">Wed</div>
+        <div id="day-tab-R" class="seg-btn" onclick="switchSheetDay('R')">Thu</div>
+        <div id="day-tab-F" class="seg-btn" onclick="switchSheetDay('F')">Fri</div>
+        <div id="day-tab-S" class="seg-btn" onclick="switchSheetDay('S')">Sat</div>
+        <div id="day-tab-U" class="seg-btn" onclick="switchSheetDay('U')">Sun</div>
+      </div>
     </div>
 
-    <!-- Timeline bar (7 AM – 10 PM) -->
+    <!-- Timeline -->
     <div class="px-5 pt-4 pb-1">
-      <div class="flex justify-between text-xs text-gray-500 mb-1">
+      <div class="flex justify-between text-[11px] text-tx2/60 mb-1.5">
         <span>7 AM</span><span>12 PM</span><span>5 PM</span><span>10 PM</span>
       </div>
-      <div class="timeline-bar" id="sheet-timeline"></div>
+      <div class="tl-bar" id="sheet-timeline"></div>
     </div>
 
-    <ul id="sheet-slots" class="px-5 pt-4 pb-2 space-y-2"></ul>
+    <!-- Today's slots -->
+    <ul id="sheet-slots" class="px-5 pt-3 pb-2 space-y-1.5"></ul>
 
     <!-- Full weekly schedule -->
-    <div class="px-5 pb-5 border-t border-border pt-4">
-      <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Full weekly schedule</p>
-      <ul id="sheet-weekly" class="space-y-2"></ul>
+    <div class="px-5 pb-8 pt-2 border-t border-line mt-2">
+      <p class="text-[11px] font-semibold text-tx2/60 uppercase tracking-widest mb-3">Weekly schedule</p>
+      <ul id="sheet-weekly" class="space-y-1.5"></ul>
     </div>
   </div>
 
-  <!-- ── Error banner ──────────────────────────────────────────── -->
+  <!-- Error banner -->
   <div id="error-banner"
-    class="hidden fixed bottom-4 left-4 right-4 z-50 bg-red-900/90 border border-red-700 text-red-200 text-sm px-4 py-3 rounded-xl">
-    Could not load schedule data. Make sure <code>schedule.json</code> is in the same folder.
+    class="hidden fixed bottom-4 left-4 right-4 z-50 bg-[#2c2c2e] border border-red/30 text-[13px] px-4 py-3 rounded-2xl">
+    <span class="text-red font-semibold">Could not load data.</span>
+    <span class="text-tx2 ml-1">Make sure schedule.json is in the same folder.</span>
   </div>
 
   <script>
-  // ── constants ──────────────────────────────────────────────────────────────
-  const DAY_CODES  = ['U','M','T','W','R','F','S']; // indexed by JS getDay()
+  const DAY_CODES  = ['U','M','T','W','R','F','S'];
   const DAY_NAMES  = {M:'Monday',T:'Tuesday',W:'Wednesday',R:'Thursday',F:'Friday',S:'Saturday',U:'Sunday'};
   const DAY_SHORT  = {M:'Mon',T:'Tue',W:'Wed',R:'Thu',F:'Fri',S:'Sat',U:'Sun'};
-  const TIMELINE_START = 7 * 60;
-  const TIMELINE_END   = 22 * 60;
+  const TL_START   = 7  * 60;
+  const TL_END     = 22 * 60;
 
-  // ── helpers ────────────────────────────────────────────────────────────────
   const toMin  = hhmm => { const [h,m] = hhmm.split(':').map(Number); return h*60+m; };
   const toAmPm = min  => {
     const h = Math.floor(min/60), m = min%60;
     return `${h%12||12}:${String(m).padStart(2,'0')} ${h<12?'AM':'PM'}`;
   };
-  const fmtDuration = min => {
+  const fmtDur = min => {
     if (min === null) return 'rest of day';
     const h = Math.floor(min/60), m = min%60;
     return h && m ? `${h}h ${m}m` : h ? `${h}h` : `${m}m`;
   };
-  const currentDayCode = () => DAY_CODES[new Date().getDay()];
-  const currentHHMM    = () => {
+  const todayCode = () => DAY_CODES[new Date().getDay()];
+  const nowHHMM   = () => {
     const n = new Date();
     return `${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}`;
   };
 
-  // ── state ──────────────────────────────────────────────────────────────────
-  let allRooms   = {};
-  let buildings  = [];
-  let scrapedAt  = '';
-  let sheetRoom  = null;   // currently open room data
-  let sheetDay   = null;   // active tab in sheet
+  let allRooms  = {};
+  let buildings = [];
+  let scrapedAt = '';
+  let sheetRoom = null;
 
-  // ── find free rooms ────────────────────────────────────────────────────────
-  function findFree(dayCode, queryMin, buildingFilter, minFree) {
+  function findFree(dayCode, qMin, bldFilter, minFree) {
     return Object.values(allRooms)
-      .filter(r => !buildingFilter || r.building === buildingFilter)
+      .filter(r => !bldFilter || r.building === bldFilter)
       .map(r => {
-        const todaySlots = r.slots.filter(s => s.days.includes(dayCode));
-        const occupied   = todaySlots.some(s => toMin(s.start) <= queryMin && queryMin < toMin(s.end));
-        if (occupied) return null;
-
-        const future  = todaySlots.map(s => toMin(s.start)).filter(t => t > queryMin).sort((a,b)=>a-b);
+        const slots = r.slots.filter(s => s.days.includes(dayCode));
+        if (slots.some(s => toMin(s.start) <= qMin && qMin < toMin(s.end))) return null;
+        const future  = slots.map(s => toMin(s.start)).filter(t => t > qMin).sort((a,b)=>a-b);
         const nextMin = future.length ? future[0] : null;
-        const duration = nextMin !== null ? nextMin - queryMin : null;
-
-        if (minFree > 0 && duration !== null && duration < minFree) return null;
-
-        return { ...r, freeUntil: nextMin !== null ? toAmPm(nextMin) : 'End of day', duration };
+        const dur     = nextMin !== null ? nextMin - qMin : null;
+        if (minFree > 0 && dur !== null && dur < minFree) return null;
+        return { ...r, freeUntil: nextMin !== null ? toAmPm(nextMin) : null, duration: dur };
       })
       .filter(Boolean)
       .sort((a,b) => {
@@ -217,233 +257,201 @@
       });
   }
 
-  // ── populate room dropdown based on selected building ─────────────────────
-  function populateRooms(building) {
+  function populateRooms(bld) {
     const sel = document.getElementById('f-room');
     sel.innerHTML = '<option value="">All rooms</option>';
-    if (!building) return;
-    const rooms = Object.values(allRooms)
-      .filter(r => r.building === building)
-      .map(r => r.room)
-      .sort();
-    rooms.forEach(rm => {
-      const opt = document.createElement('option');
-      opt.value = rm;
-      opt.textContent = rm;
-      sel.appendChild(opt);
-    });
+    if (!bld) return;
+    Object.values(allRooms)
+      .filter(r => r.building === bld)
+      .map(r => r.room).sort()
+      .forEach(rm => {
+        const o = document.createElement('option');
+        o.value = o.textContent = rm;
+        sel.appendChild(o);
+      });
   }
 
-  // ── render results ─────────────────────────────────────────────────────────
   function render() {
-    const building  = document.getElementById('f-building').value;
-    const roomSel   = document.getElementById('f-room').value;
-    const dayCode   = document.getElementById('f-day').value;
-    const timeVal   = document.getElementById('f-time').value;
-    const minFree   = parseInt(document.getElementById('f-minfree').value) || 0;
-    const queryMin  = toMin(timeVal);
+    const bld      = document.getElementById('f-building').value;
+    const roomSel  = document.getElementById('f-room').value;
+    const dayCode  = document.getElementById('f-day').value;
+    const qMin     = toMin(document.getElementById('f-time').value);
+    const minFree  = parseInt(document.getElementById('f-minfree').value) || 0;
+    const dayLabel = DAY_NAMES[dayCode];
+    const timeLbl  = toAmPm(qMin);
+    const roomMode = !!roomSel;
 
-    const dayLabel  = DAY_NAMES[dayCode] || dayCode;
-    const timeLabel = toAmPm(queryMin);
-
-    let displayRooms;
-    let isRoomMode = !!roomSel; // specific room selected
-
-    if (isRoomMode) {
-      // Show that one room with free/occupied status
-      const key = `${building}-${roomSel}`;
-      const r = allRooms[key] || Object.values(allRooms).find(r => r.building === building && r.room === roomSel);
-      if (!r) { displayRooms = []; }
+    let rows;
+    if (roomMode) {
+      const r = allRooms[`${bld}-${roomSel}`] ||
+                Object.values(allRooms).find(r => r.building === bld && r.room === roomSel);
+      if (!r) { rows = []; }
       else {
-        const todaySlots = r.slots.filter(s => s.days.includes(dayCode));
-        const occ = todaySlots.find(s => toMin(s.start) <= queryMin && queryMin < toMin(s.end));
+        const slots = r.slots.filter(s => s.days.includes(dayCode));
+        const occ   = slots.find(s => toMin(s.start) <= qMin && qMin < toMin(s.end));
         if (occ) {
-          displayRooms = [{ ...r, occupied: true, freeUntil: toAmPm(toMin(occ.end)), duration: null }];
+          rows = [{ ...r, occupied: true,  freeUntil: toAmPm(toMin(occ.end)), duration: toMin(occ.end) - qMin }];
         } else {
-          const future = todaySlots.map(s => toMin(s.start)).filter(t => t > queryMin).sort((a,b)=>a-b);
+          const future  = slots.map(s => toMin(s.start)).filter(t => t > qMin).sort((a,b)=>a-b);
           const nextMin = future.length ? future[0] : null;
-          displayRooms = [{ ...r, occupied: false, freeUntil: nextMin !== null ? toAmPm(nextMin) : 'End of day', duration: nextMin !== null ? nextMin - queryMin : null }];
+          rows = [{ ...r, occupied: false, freeUntil: nextMin ? toAmPm(nextMin) : null, duration: nextMin ? nextMin - qMin : null }];
         }
       }
-      document.getElementById('status').textContent = `${building} ${roomSel} — ${dayLabel} at ${timeLabel}`;
+      document.getElementById('status').textContent = `${bld} ${roomSel} — ${dayLabel} at ${timeLbl}`;
       document.getElementById('result-count').textContent = '';
     } else {
-      displayRooms = findFree(dayCode, queryMin, building, minFree);
-      document.getElementById('status').textContent = `Free rooms — ${dayLabel} at ${timeLabel}`;
-      document.getElementById('result-count').textContent = `${displayRooms.length} room${displayRooms.length !== 1 ? 's' : ''}`;
+      rows = findFree(dayCode, qMin, bld, minFree);
+      document.getElementById('status').textContent = `Free rooms — ${dayLabel} at ${timeLbl}`;
+      document.getElementById('result-count').textContent = `${rows.length} room${rows.length !== 1 ? 's' : ''}`;
     }
 
     const grid = document.getElementById('results');
     grid.innerHTML = '';
-
-    if (!displayRooms.length) {
-      grid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-16">No rooms found.</p>`;
+    if (!rows.length) {
+      grid.innerHTML = `<p class="col-span-full text-center text-tx2 py-16 text-[14px]">No rooms found.</p>`;
       return;
     }
 
-    displayRooms.forEach(r => {
-      const card = document.createElement('button');
-      const isOccupied = isRoomMode && r.occupied;
-      card.className = [
-        'bg-card border rounded-xl p-3 text-left',
-        'hover:bg-[#242424] transition-all',
-        'focus:outline-none focus:ring-1 focus:ring-gold',
-        'flex flex-col gap-1.5',
-        isOccupied ? 'border-red-800/60' : 'border-border hover:border-gold/60',
-      ].join(' ');
+    rows.forEach(r => {
+      const isOcc = roomMode && r.occupied;
+      const btn   = document.createElement('button');
+      btn.className = `card ${isOcc ? 'occupied' : ''} p-4 text-left flex flex-col gap-2 w-full focus:outline-none focus:ring-2 focus:ring-blue/40`;
 
-      // Explicit human-readable status + time description
-      let statusText, statusColor, timeLine;
-      if (isOccupied) {
-        statusText  = 'OCCUPIED';
-        statusColor = 'text-red-400';
-        timeLine    = `Free at ${r.freeUntil}`;
-      } else if (r.duration === null) {
-        statusText  = 'FREE';
-        statusColor = 'text-green-400';
-        timeLine    = 'No more classes today';
+      let desc;
+      if (isOcc) {
+        desc = `Free at ${r.freeUntil} · ${fmtDur(r.duration)} left`;
+      } else if (!r.freeUntil) {
+        desc = 'No more classes today';
       } else {
-        statusText  = 'FREE';
-        statusColor = 'text-green-400';
-        timeLine    = `Free for ${fmtDuration(r.duration)} · next class ${r.freeUntil}`;
+        desc = `Free for ${fmtDur(r.duration)} · next class ${r.freeUntil}`;
       }
 
-      card.innerHTML = `
-        <div class="flex items-center justify-between gap-1">
-          <span class="text-gold font-bold text-sm">${r.building}</span>
-          <span class="font-mono text-xs text-gray-500">${r.room}</span>
+      btn.innerHTML = `
+        <div class="flex items-baseline justify-between gap-2">
+          <span class="font-mono font-bold text-[20px] text-tx leading-none">${r.room}</span>
+          <span class="text-[12px] text-tx2 font-medium">${r.building}</span>
         </div>
-        <span class="text-base font-bold ${statusColor}">${statusText}</span>
-        <span class="text-xs text-gray-400 leading-snug">${timeLine}</span>
+        <span class="pill ${isOcc ? 'pill-red' : 'pill-green'}">
+          <span class="dot ${isOcc ? 'dot-red' : 'dot-green'}"></span>
+          ${isOcc ? 'Occupied' : 'Free'}
+        </span>
+        <span class="text-[12px] text-tx2 leading-snug">${desc}</span>
       `;
-
-      card.addEventListener('click', () => openSheet(r, dayCode, queryMin));
-      grid.appendChild(card);
+      btn.addEventListener('click', () => openSheet(r, dayCode, qMin));
+      grid.appendChild(btn);
     });
   }
 
-  // ── detail sheet ───────────────────────────────────────────────────────────
-  function openSheet(room, dayCode, queryMin) {
+  // ── Sheet ──────────────────────────────────────────────────────────────────
+  function openSheet(room, dayCode, qMin) {
     sheetRoom = room;
-    renderSheetDay(dayCode, queryMin);
-
+    renderSheetDay(dayCode, qMin);
     document.getElementById('sheet-backdrop').classList.remove('hidden');
-    const sheet = document.getElementById('sheet');
-    sheet.classList.remove('hidden');
-    sheet.classList.add('sheet-enter');
-    setTimeout(() => sheet.classList.remove('sheet-enter'), 250);
+    const s = document.getElementById('sheet');
+    s.classList.remove('hidden');
+    s.classList.add('sheet-enter');
+    setTimeout(() => s.classList.remove('sheet-enter'), 220);
   }
 
-  function switchSheetDay(dayCode) {
+  function switchSheetDay(d) {
     if (!sheetRoom) return;
-    const timeVal  = document.getElementById('f-time').value;
-    const queryMin = toMin(timeVal);
-    renderSheetDay(dayCode, queryMin);
+    renderSheetDay(d, toMin(document.getElementById('f-time').value));
   }
 
-  function renderSheetDay(dayCode, queryMin) {
-    sheetDay = dayCode;
+  function renderSheetDay(dayCode, qMin) {
+    ['M','T','W','R','F','S','U'].forEach(d =>
+      document.getElementById('day-tab-'+d).classList.toggle('active', d === dayCode)
+    );
 
-    // Update tab highlights
-    ['M','T','W','R','F','S','U'].forEach(d => {
-      document.getElementById('day-tab-' + d).classList.toggle('active', d === dayCode);
-    });
-
-    const r = sheetRoom;
-    document.getElementById('sheet-title').textContent = `${r.building} ${r.room}`;
-
-    const daySlots = (r.slots || [])
-      .filter(s => s.days.includes(dayCode))
-      .sort((a,b) => toMin(a.start) - toMin(b.start));
-
-    // Status line
-    const isToday = dayCode === currentDayCode();
-    const nowMin  = isToday ? queryMin : -1;
-    const occupied = daySlots.find(s => toMin(s.start) <= nowMin && nowMin < toMin(s.end));
+    const r        = sheetRoom;
+    const isToday  = dayCode === todayCode();
+    const nowMin   = isToday ? qMin : -1;
+    const daySlots = (r.slots||[]).filter(s => s.days.includes(dayCode)).sort((a,b)=>toMin(a.start)-toMin(b.start));
+    const occ      = daySlots.find(s => toMin(s.start) <= nowMin && nowMin < toMin(s.end));
     const future   = daySlots.filter(s => toMin(s.start) > nowMin);
 
+    document.getElementById('sheet-title').textContent = `${r.building} ${r.room}`;
+
+    // Status line
     let statusHtml;
     if (!isToday) {
-      statusHtml = `<span class="text-gray-400">${DAY_NAMES[dayCode]} schedule</span>`;
-    } else if (occupied) {
-      const gap = toMin(occupied.end) - nowMin;
-      statusHtml = `<span class="text-red-400 font-semibold">Occupied</span> <span class="text-gray-400">— free at ${toAmPm(toMin(occupied.end))} (${fmtDuration(gap)})</span>`;
+      statusHtml = `<span class="text-tx2">${DAY_NAMES[dayCode]}</span>`;
+    } else if (occ) {
+      const gap = toMin(occ.end) - nowMin;
+      statusHtml = `<span class="text-red font-semibold">Occupied</span><span class="text-tx2"> · free at ${toAmPm(toMin(occ.end))} (${fmtDur(gap)})</span>`;
     } else if (future.length) {
       const gap = toMin(future[0].start) - nowMin;
-      statusHtml = `<span class="text-green-400 font-semibold">Free</span> <span class="text-gray-400">— occupied again at ${toAmPm(toMin(future[0].start))} (${fmtDuration(gap)})</span>`;
+      statusHtml = `<span class="text-green font-semibold">Free</span><span class="text-tx2"> · next class at ${toAmPm(toMin(future[0].start))} (${fmtDur(gap)})</span>`;
     } else if (daySlots.length) {
-      statusHtml = `<span class="text-green-400 font-semibold">Free</span> <span class="text-gray-400">— no more classes today</span>`;
+      statusHtml = `<span class="text-green font-semibold">Free</span><span class="text-tx2"> · no more classes today</span>`;
     } else {
-      statusHtml = `<span class="text-green-400 font-semibold">Free all day</span> <span class="text-gray-400">— nothing scheduled</span>`;
+      statusHtml = `<span class="text-green font-semibold">Free all day</span><span class="text-tx2"> · nothing scheduled</span>`;
     }
     document.getElementById('sheet-status-line').innerHTML = statusHtml;
 
     // Timeline
-    const tl = document.getElementById('sheet-timeline');
+    const tl    = document.getElementById('sheet-timeline');
     tl.innerHTML = '';
-    const range = TIMELINE_END - TIMELINE_START;
+    const range  = TL_END - TL_START;
     daySlots.forEach(s => {
-      const left  = Math.max(0, (toMin(s.start) - TIMELINE_START) / range * 100);
+      const left  = Math.max(0, (toMin(s.start) - TL_START) / range * 100);
       const width = Math.min(100 - left, (toMin(s.end) - toMin(s.start)) / range * 100);
-      const el = document.createElement('div');
-      el.className = 'timeline-slot';
+      const el    = document.createElement('div');
+      el.className = 'tl-slot';
       el.style.left  = left  + '%';
       el.style.width = width + '%';
       tl.appendChild(el);
     });
     if (isToday) {
-      const nowPct = (nowMin - TIMELINE_START) / range * 100;
-      if (nowPct >= 0 && nowPct <= 100) {
-        const marker = document.createElement('div');
-        marker.style.cssText = `position:absolute;top:-2px;height:10px;width:2px;background:#fff;border-radius:1px;left:${nowPct}%`;
-        tl.appendChild(marker);
+      const pct = (nowMin - TL_START) / range * 100;
+      if (pct >= 0 && pct <= 100) {
+        const m = document.createElement('div');
+        m.style.cssText = `position:absolute;top:-3px;height:11px;width:2px;background:#fff;border-radius:1px;left:${pct}%;box-shadow:0 0 4px rgba(255,255,255,.6)`;
+        tl.appendChild(m);
       }
     }
 
-    // Slot list (selected day)
+    // Day slot list
     const ul = document.getElementById('sheet-slots');
     ul.innerHTML = '';
     if (!daySlots.length) {
-      ul.innerHTML = `<li class="text-gray-500 text-sm">Nothing scheduled.</li>`;
+      ul.innerHTML = `<li class="text-[13px] text-tx2">Nothing scheduled.</li>`;
     } else {
       daySlots.forEach(s => {
         const sMin = toMin(s.start), eMin = toMin(s.end);
         const isNow  = isToday && sMin <= nowMin && nowMin < eMin;
         const isPast = isToday && eMin <= nowMin;
         const li = document.createElement('li');
-        li.className = `flex items-center justify-between rounded-lg px-3 py-2 text-sm ${
-          isNow ? 'bg-red-950/60 border border-red-800/50' : 'bg-surface'
-        } ${isPast ? 'opacity-40' : ''}`;
+        li.className = `flex items-center justify-between rounded-xl px-4 py-2.5 text-[13px] ${
+          isNow ? 'bg-red/10 border border-red/20' : 'bg-[#1c1c1e]'
+        } ${isPast ? 'opacity-35' : ''}`;
         li.innerHTML = `
           <span class="font-mono">${toAmPm(sMin)} – ${toAmPm(eMin)}</span>
-          ${isNow ? '<span class="text-red-400 text-xs font-semibold">now</span>' : ''}
+          ${isNow ? '<span class="text-red text-[11px] font-semibold uppercase tracking-wide">Now</span>' : ''}
         `;
         ul.appendChild(li);
       });
     }
 
-    // Full weekly schedule — show every slot across all days, sorted by start time
-    const DAY_ORDER = ['M','T','W','R','F','S','U'];
-    const DAY_LABEL = {M:'Mon',T:'Tue',W:'Wed',R:'Thu',F:'Fri',S:'Sat',U:'Sun'};
-    const weekly = document.getElementById('sheet-weekly');
-    weekly.innerHTML = '';
-    const allSlots = (r.slots || []).slice().sort((a,b) => toMin(a.start) - toMin(b.start));
+    // Full weekly schedule
+    const DAY_ORD = ['M','T','W','R','F','S','U'];
+    const wk = document.getElementById('sheet-weekly');
+    wk.innerHTML = '';
+    const allSlots = (r.slots||[]).slice().sort((a,b)=>toMin(a.start)-toMin(b.start));
     if (!allSlots.length) {
-      weekly.innerHTML = `<li class="text-gray-500 text-sm">No classes scheduled this room.</li>`;
+      wk.innerHTML = `<li class="text-[13px] text-tx2">No classes scheduled.</li>`;
     } else {
       allSlots.forEach(s => {
         const dayStr = s.days
-          .slice()
-          .sort((a,b) => DAY_ORDER.indexOf(a) - DAY_ORDER.indexOf(b))
-          .map(d => DAY_LABEL[d] || d)
-          .join(' · ');
+          .slice().sort((a,b)=>DAY_ORD.indexOf(a)-DAY_ORD.indexOf(b))
+          .map(d => DAY_SHORT[d]||d).join(' · ');
         const li = document.createElement('li');
-        li.className = 'flex items-center justify-between rounded-lg px-3 py-2 text-sm bg-surface';
+        li.className = 'flex items-center justify-between rounded-xl px-4 py-2.5 text-[13px] bg-[#1c1c1e]';
         li.innerHTML = `
-          <span class="font-mono text-white">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span>
-          <span class="text-gray-400 text-xs">${dayStr}</span>
+          <span class="font-mono text-tx">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span>
+          <span class="text-tx2 text-[12px]">${dayStr}</span>
         `;
-        weekly.appendChild(li);
+        wk.appendChild(li);
       });
     }
   }
@@ -454,39 +462,22 @@
     sheetRoom = null;
   }
 
-  // ── live clock ─────────────────────────────────────────────────────────────
   function tickClock() {
-    const n    = new Date();
-    const h    = n.getHours(), m = n.getMinutes();
-    const ampm = h < 12 ? 'AM' : 'PM';
-    const h12  = h % 12 || 12;
+    const n = new Date(), h = n.getHours(), m = n.getMinutes();
     document.getElementById('live-time').textContent =
-      `${DAY_SHORT[currentDayCode()]} ${h12}:${String(m).padStart(2,'0')} ${ampm}`;
+      `${DAY_SHORT[todayCode()]} ${h%12||12}:${String(m).padStart(2,'0')} ${h<12?'AM':'PM'}`;
   }
 
-  // ── data age ───────────────────────────────────────────────────────────────
   function showDataAge() {
     if (!scrapedAt) return;
     const ago  = Math.floor((Date.now() - new Date(scrapedAt)) / 86400000);
-    const text = ago === 0 ? 'today' : ago === 1 ? 'yesterday' : `${ago} days ago`;
-    document.getElementById('data-age').textContent = `data from ${text}`;
+    document.getElementById('data-age').textContent =
+      `Updated ${ago === 0 ? 'today' : ago === 1 ? 'yesterday' : ago + ' days ago'}`;
   }
 
-  // ── populate building dropdown ─────────────────────────────────────────────
-  function populateBuildings() {
-    const sel = document.getElementById('f-building');
-    buildings.sort().forEach(b => {
-      const opt = document.createElement('option');
-      opt.value = b;
-      opt.textContent = b;
-      sel.appendChild(opt);
-    });
-  }
-
-  // ── init ───────────────────────────────────────────────────────────────────
   async function init() {
-    document.getElementById('f-day').value  = currentDayCode();
-    document.getElementById('f-time').value = currentHHMM();
+    document.getElementById('f-day').value  = todayCode();
+    document.getElementById('f-time').value = nowHHMM();
 
     document.getElementById('f-building').addEventListener('change', () => {
       populateRooms(document.getElementById('f-building').value);
@@ -496,10 +487,9 @@
       document.getElementById(id).addEventListener('change', render)
     );
     document.getElementById('f-time').addEventListener('input', render);
-
     document.getElementById('btn-now').addEventListener('click', () => {
-      document.getElementById('f-day').value  = currentDayCode();
-      document.getElementById('f-time').value = currentHHMM();
+      document.getElementById('f-day').value  = todayCode();
+      document.getElementById('f-time').value = nowHHMM();
       render();
     });
 
@@ -507,19 +497,21 @@
     setInterval(tickClock, 10000);
 
     try {
-      const res = await fetch('./schedule.json');
+      const res  = await fetch('./schedule.json');
       if (!res.ok) throw new Error(res.status);
       const data = await res.json();
-      allRooms  = data.rooms || {};
-      scrapedAt = data.scraped_at || '';
-      buildings = [...new Set(Object.values(allRooms).map(r => r.building))];
-      populateBuildings();
+      allRooms   = data.rooms   || {};
+      scrapedAt  = data.scraped_at || '';
+      buildings  = [...new Set(Object.values(allRooms).map(r => r.building))];
+      const bSel = document.getElementById('f-building');
+      buildings.sort().forEach(b => {
+        const o = document.createElement('option'); o.value = o.textContent = b; bSel.appendChild(o);
+      });
       showDataAge();
       render();
-    } catch (e) {
+    } catch(e) {
       document.getElementById('status').textContent = 'Failed to load data.';
       document.getElementById('error-banner').classList.remove('hidden');
-      console.error('Failed to load schedule.json:', e);
     }
   }
 
