@@ -450,7 +450,7 @@ function render() {
     else {
       const slots = r.slots.filter(s=>s.days.includes(day));
       const occ   = slots.find(s=>toMin(s.start)<=qMin&&qMin<toMin(s.end));
-      if(occ) rows=[{...r,occupied:true,  freeUntil:toAmPm(toMin(occ.end)), duration:toMin(occ.end)-qMin}];
+      if(occ) rows=[{...r,occupied:true,  freeUntil:toAmPm(toMin(occ.end)), duration:toMin(occ.end)-qMin, currentSlot:occ}];
       else {
         const future = slots.map(s=>toMin(s.start)).filter(t=>t>qMin).sort((a,b)=>a-b);
         const nxt    = future.length?future[0]:null;
@@ -487,12 +487,21 @@ function render() {
         ? `Until ${r.freeUntil}`
         : 'No more classes today';
 
+    const cs = isOcc && r.currentSlot;
+    const courseHtml = cs && cs.course
+      ? `<div style="font-size:.75rem;line-height:1.3;margin-top:-2px;">
+           <span style="color:#ffc904;font-weight:600;">${cs.course}</span>
+           ${cs.title ? `<span style="color:#80808a;"> · ${cs.title}</span>` : ''}
+         </div>`
+      : '';
+
     btn.innerHTML = `
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:6px;">
         <span style="font-size:.75rem;color:#80808a;font-weight:500;letter-spacing:.01em;">${r.building}</span>
         ${pillHtml}
       </div>
       <span style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.25rem;line-height:1;color:#ededf0;">${r.room}</span>
+      ${courseHtml}
       <div class="tl">${buildMiniTl(r,day,qMin)}</div>
       <span style="font-size:.7rem;color:#80808a;">${descHtml}</span>
     `;
@@ -531,8 +540,8 @@ function buildSheet(day, qMin) {
 
   let st;
   if(!isToday)           st = '';
-  else if(occ)           st = `<span style="color:#f87171;">Occupied</span> · free at ${toAmPm(toMin(occ.end))} (${fmtDur(toMin(occ.end)-nowMin)})`;
-  else if(future.length) st = `<span style="color:#34d399;">Free</span> · next class ${toAmPm(toMin(future[0].start))} (${fmtDur(toMin(future[0].start)-nowMin)})`;
+  else if(occ)           st = `<span style="color:#f87171;">Occupied</span>${occ.course ? ` · <span style="color:#ffc904;font-weight:600;">${occ.course}</span>${occ.title ? `<span style="color:#80808a;font-weight:400;"> · ${occ.title}</span>` : ''}` : ''} · free at ${toAmPm(toMin(occ.end))} (${fmtDur(toMin(occ.end)-nowMin)})`;
+  else if(future.length) st = `<span style="color:#34d399;">Free</span> · next class ${toAmPm(toMin(future[0].start))} (${fmtDur(toMin(future[0].start)-nowMin)})${future[0].course ? ` — <span style="color:#ffc904;font-weight:600;">${future[0].course}</span>` : ''}`;
   else if(slots.length)  st = `<span style="color:#34d399;">Free</span> · no more classes today`;
   else                   st = `<span style="color:#34d399;">Free all day</span>`;
   document.getElementById('sheet-status').innerHTML = st;
@@ -578,7 +587,7 @@ function buildSheet(day, qMin) {
       const blk = document.createElement('div');
       blk.className = 'wk-occ absolute';
       blk.style.cssText = `top:${top}px;height:${ht}px;left:${colL};width:${colW};padding:2px 3px;`;
-      if(ht>18) blk.textContent = toAmPm(toMin(s.start)).replace(':00','').replace(' AM','a').replace(' PM','p');
+      if(ht>18) blk.textContent = s.course || toAmPm(toMin(s.start)).replace(':00','').replace(' AM','a').replace(' PM','p');
       body.appendChild(blk);
     });
 
@@ -608,8 +617,17 @@ function buildSheet(day, qMin) {
       const days = s.days.slice().sort((a,b)=>DAY_ORD.indexOf(a)-DAY_ORD.indexOf(b))
                          .map(d=>DAY_SHORT[d]||d).join(' · ');
       const li = document.createElement('li');
-      li.style.cssText = 'display:flex;align-items:center;justify-content:space-between;border-radius:10px;padding:10px 14px;font-size:.8125rem;background:#111116;';
-      li.innerHTML=`<span class="font-mono">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span><span style="color:#80808a;font-size:.75rem;">${days}</span>`;
+      li.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:12px;border-radius:10px;padding:10px 14px;background:#111116;';
+      const left = s.course
+        ? `<div>
+             <div style="font-size:.75rem;margin-bottom:2px;">
+               <span style="color:#ffc904;font-weight:600;">${s.course}</span>
+               ${s.title ? `<span style="color:#80808a;"> · ${s.title}</span>` : ''}
+             </div>
+             <span class="font-mono" style="font-size:.8125rem;">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span>
+           </div>`
+        : `<span class="font-mono" style="font-size:.8125rem;">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span>`;
+      li.innerHTML = `${left}<span style="color:#80808a;font-size:.75rem;white-space:nowrap;">${days}</span>`;
       ul.appendChild(li);
     });
   }

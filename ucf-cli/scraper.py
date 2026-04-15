@@ -334,9 +334,11 @@ def _to_room_dict(courses) -> Dict:
             if key not in rooms:
                 rooms[key] = {"building": section.location.building, "room": section.location.room, "slots": []}
             rooms[key]["slots"].append({
-                "days":  section.days,
-                "start": section.time.start,
-                "end":   section.time.end,
+                "days":   section.days,
+                "start":  section.time.start,
+                "end":    section.time.end,
+                "course": course.number,
+                "title":  course.title or "",
             })
     return rooms
 
