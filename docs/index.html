@@ -1,197 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>RoomRadar · UCF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            bg:     '#1c1c1e', surface: '#2c2c2e', raised: '#3a3a3c',
-            line:   'rgba(255,255,255,0.08)',
-            tx:     '#ffffff', tx2: '#98989e',
-            green:  '#30d158', red: '#ff453a', blue: '#0a84ff',
+            bg:     '#0e0e10',
+            surface:'#18181c',
+            raised: '#222228',
+            border: '#2a2a32',
+            gold:   '#ffc904',
+            tx:     '#ededf0',
+            tx2:    '#80808a',
+            tx3:    '#48484f',
+            free:   '#34d399',
+            occ:    '#f87171',
           },
           fontFamily: {
-            sans: ['-apple-system','BlinkMacSystemFont','Segoe UI','sans-serif'],
-            mono: ['ui-monospace','SF Mono','SFMono-Regular','monospace'],
+            sans: ['Inter','system-ui','sans-serif'],
+            mono: ['"JetBrains Mono"','ui-monospace','monospace'],
           },
         },
       },
     };
   </script>
   <style>
-    html,body { background:#1c1c1e; }
-    ::-webkit-scrollbar { width:5px; height:5px; }
-    ::-webkit-scrollbar-thumb { background:#48484a; border-radius:10px; }
-    ::-webkit-scrollbar-track { background:transparent; }
-    select option { background:#2c2c2e; color:#fff; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { background: #0e0e10; color: #ededf0; }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-thumb { background: #2a2a32; border-radius: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    select option { background: #18181c; color: #ededf0; }
 
-    .glass {
-      background:rgba(28,28,30,.88);
-      backdrop-filter:saturate(180%) blur(20px);
-      -webkit-backdrop-filter:saturate(180%) blur(20px);
+    /* ── controls ── */
+    .ctrl {
+      background: #18181c;
+      border: 1px solid #2a2a32;
+      border-radius: 8px;
+      color: #ededf0;
+      font-size: .8125rem;
+      font-family: inherit;
+      padding: 6px 10px;
+      outline: none;
+      cursor: pointer;
+      transition: border-color .15s;
     }
-    .card {
-      background:#2c2c2e;
-      border:1px solid rgba(255,255,255,.07);
-      border-radius:14px;
-      transition:background .12s,border-color .12s;
+    .ctrl:hover  { border-color: #3a3a44; }
+    .ctrl:focus  { border-color: rgba(255,201,4,.5); }
+
+    .btn-now {
+      background: #ffc904;
+      color: #0e0e10;
+      font-weight: 600;
+      font-size: .8125rem;
+      font-family: inherit;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 14px;
+      cursor: pointer;
+      transition: opacity .15s;
     }
-    .card:hover { background:#3a3a3c; border-color:rgba(255,255,255,.13); }
-    .card.occ   { border-color:rgba(255,69,58,.22); }
+    .btn-now:hover { opacity: .82; }
 
-    .pill { display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:20px;font-size:.72rem;font-weight:600; }
-    .pill-g { background:rgba(48,209,88,.14); color:#30d158; }
-    .pill-r { background:rgba(255,69,58,.14); color:#ff453a; }
-    .dot { width:6px;height:6px;border-radius:50%; }
-    .dot-g { background:#30d158; } .dot-r { background:#ff453a; }
+    /* ── tabs ── */
+    .tab-btn {
+      padding: 10px 16px;
+      font-size: .8125rem;
+      font-weight: 500;
+      font-family: inherit;
+      border: none;
+      border-bottom: 2px solid transparent;
+      background: none;
+      color: #80808a;
+      cursor: pointer;
+      transition: color .15s, border-color .15s;
+    }
+    .tab-btn:hover { color: #ededf0; }
+    .tab-btn.active { color: #ffc904; border-bottom-color: #ffc904; }
 
-    /* ── mini card timeline ── */
-    .mini-tl { position:relative;height:14px;border-radius:6px;background:#1c1c1e;overflow:visible; }
-    .mini-slot { position:absolute;top:0;height:100%;background:rgba(255,69,58,.55);border-radius:3px; }
-    .mini-now  { position:absolute;top:-2px;height:18px;width:2px;background:#fff;border-radius:1px;box-shadow:0 0 5px rgba(255,255,255,.7); }
-    .mini-free { position:absolute;top:0;height:100%;background:rgba(48,209,88,.25);border-radius:3px; }
+    /* ── room cards ── */
+    .room-card {
+      background: #18181c;
+      border: 1px solid #2a2a32;
+      border-radius: 12px;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px;
+      cursor: pointer;
+      transition: border-color .15s, background .15s;
+    }
+    .room-card:hover  { background: #1e1e24; border-color: #3a3a44; }
+    .room-card:focus  { outline: none; border-color: rgba(255,201,4,.45); }
+    .room-card.is-occ { border-color: rgba(248,113,113,.2); }
+
+    /* ── status pills ── */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 600;
+    }
+    .pill-free { background: rgba(52,211,153,.1);  color: #34d399; border: 1px solid rgba(52,211,153,.18); }
+    .pill-occ  { background: rgba(248,113,113,.1); color: #f87171; border: 1px solid rgba(248,113,113,.18); }
+
+    /* ── mini timeline ── */
+    .tl      { position: relative; height: 4px; border-radius: 999px; background: #222228; overflow: visible; }
+    .tl-slot { position: absolute; top: 0; height: 100%; background: rgba(248,113,113,.45); border-radius: 999px; }
+    .tl-free { position: absolute; top: 0; height: 100%; background: rgba(52,211,153,.3);  border-radius: 999px; }
+    .tl-now  { position: absolute; top: -4px; height: 12px; width: 2px; background: #fff; border-radius: 1px; box-shadow: 0 0 4px rgba(255,255,255,.5); }
 
     /* ── week calendar ── */
-    .wk-wrap { overflow-x:auto;overflow-y:auto; }
-    .wk-grid {
-      display:grid;
-      grid-template-columns:36px repeat(5,1fr);
-      min-width:320px;
-    }
+    .wk-wrap { overflow: auto; }
+    .wk-grid { display: grid; grid-template-columns: 32px repeat(5,1fr); min-width: 280px; }
     .wk-head-cell {
-      text-align:center;font-size:.7rem;font-weight:600;padding:6px 2px;
-      border-bottom:1px solid rgba(255,255,255,.08);color:#98989e;
-      position:sticky;top:0;background:#2c2c2e;z-index:2;
+      font-size: .65rem; font-weight: 600; text-align: center;
+      padding: 5px 2px; color: #80808a;
+      position: sticky; top: 0; z-index: 2;
+      border-bottom: 1px solid #2a2a32;
     }
-    .wk-head-cell.today { color:#fff; }
-    .wk-time-col { color:#98989e;font-size:.65rem;text-align:right;padding-right:6px;line-height:1;user-select:none; }
-    .wk-day-col  { position:relative;border-left:1px solid rgba(255,255,255,.05); }
-    .wk-hour-line { position:absolute;left:0;right:0;height:1px;background:rgba(255,255,255,.04); }
+    .wk-head-cell.today { color: #ededf0; }
+    .wk-time-col  { color: #48484f; font-size: .6rem; text-align: right; padding-right: 5px; line-height: 1; user-select: none; }
+    .wk-hour-line { position: absolute; left: 0; right: 0; height: 1px; background: #1c1c22; }
     .wk-occ {
-      position:absolute;left:2px;right:2px;
-      background:rgba(255,69,58,.28);
-      border:1px solid rgba(255,69,58,.5);
-      border-radius:5px;font-size:.6rem;color:#ff453a;
-      display:flex;align-items:center;justify-content:center;
-      overflow:hidden;font-weight:600;
+      position: absolute; left: 2px; right: 2px;
+      background: rgba(248,113,113,.18);
+      border: 1px solid rgba(248,113,113,.3);
+      border-radius: 4px; font-size: .6rem; color: #f87171;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; font-weight: 600;
     }
     .wk-now-line {
-      position:absolute;left:0;right:0;height:2px;
-      background:#ff453a;border-radius:1px;z-index:3;
-      box-shadow:0 0 6px rgba(255,69,58,.7);
+      position: absolute; left: 0; right: 0;
+      height: 2px; background: #ffc904; border-radius: 1px;
+      z-index: 3; box-shadow: 0 0 6px rgba(255,201,4,.5);
     }
     .wk-now-dot {
-      position:absolute;width:8px;height:8px;border-radius:50%;
-      background:#ff453a;left:-4px;top:-3px;
+      position: absolute; width: 6px; height: 6px; border-radius: 50%;
+      background: #ffc904; left: -3px; top: -2px;
     }
 
-    .sheet-enter { animation:slideUp .22s cubic-bezier(.4,0,.2,1); }
-    @keyframes slideUp { from{transform:translateY(100%);opacity:0} to{transform:translateY(0);opacity:1} }
+    /* ── sheet animation ── */
+    .sheet-enter { animation: slideUp .2s cubic-bezier(.4,0,.2,1); }
+    @keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   </style>
 </head>
 
-<body class="text-tx min-h-screen font-sans antialiased">
+<body class="min-h-screen font-sans antialiased" style="background:#0e0e10;color:#ededf0;">
 
-  <!-- Header -->
-  <header class="glass sticky top-0 z-30 border-b border-line px-5 py-3 flex items-center justify-between">
-    <span class="text-[17px] font-semibold tracking-tight">RoomRadar <span class="text-tx2 font-normal">UCF</span></span>
-    <div class="text-right">
-      <div id="live-time" class="text-[13px] font-mono text-tx2"></div>
-      <div id="data-age"  class="text-[11px] text-tx2/50 mt-0.5"></div>
-    </div>
-  </header>
+<!-- ── header ─────────────────────────────────────────────────────────────── -->
+<header style="background:#111116;border-bottom:1px solid #2a2a32;" class="sticky top-0 z-30 px-5 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2.5">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <circle cx="9" cy="9" r="8.5" stroke="#ffc904" stroke-width="1"/>
+      <circle cx="9" cy="9" r="3" fill="#ffc904"/>
+    </svg>
+    <span class="font-semibold text-[15px] tracking-tight">RoomRadar</span>
+    <span style="color:#2a2a32;font-weight:300;margin:0 1px;">|</span>
+    <span class="text-[13px]" style="color:#80808a;">UCF</span>
+  </div>
+  <div class="text-right">
+    <div id="live-time" class="text-[12px] font-mono" style="color:#80808a;"></div>
+    <div id="data-age"  class="text-[11px] mt-0.5"    style="color:#48484f;"></div>
+  </div>
+</header>
 
-  <!-- Filters -->
-  <div class="glass sticky top-[49px] z-20 border-b border-line px-5 py-2.5 flex flex-wrap gap-2 items-center">
-    <select id="f-building" class="bg-raised text-tx text-[13px] rounded-[9px] px-3 py-1.5 border border-line focus:outline-none focus:border-blue/50 cursor-pointer">
+<!-- ── nav tabs ───────────────────────────────────────────────────────────── -->
+<div style="background:#111116;border-bottom:1px solid #2a2a32;" class="sticky top-[49px] z-20 px-3 flex">
+  <button class="tab-btn active" id="tab-rooms" onclick="switchTab('rooms')">Rooms</button>
+  <button class="tab-btn"        id="tab-map"   onclick="switchTab('map')">Campus Map</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     ROOMS VIEW
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div id="view-rooms">
+
+  <!-- filter bar -->
+  <div style="background:#111116;border-bottom:1px solid #2a2a32;" class="sticky top-[89px] z-20 px-5 py-2.5 flex flex-wrap gap-2 items-center">
+    <select id="f-building" class="ctrl">
       <option value="">All buildings</option>
     </select>
-    <select id="f-room" class="bg-raised text-tx text-[13px] rounded-[9px] px-3 py-1.5 border border-line focus:outline-none focus:border-blue/50 cursor-pointer">
+    <select id="f-room" class="ctrl">
       <option value="">All rooms</option>
     </select>
-    <select id="f-day" class="bg-raised text-tx text-[13px] rounded-[9px] px-3 py-1.5 border border-line focus:outline-none focus:border-blue/50 cursor-pointer">
-      <option value="M">Monday</option><option value="T">Tuesday</option>
-      <option value="W">Wednesday</option><option value="R">Thursday</option>
-      <option value="F">Friday</option><option value="S">Saturday</option>
+    <select id="f-day" class="ctrl">
+      <option value="M">Monday</option>
+      <option value="T">Tuesday</option>
+      <option value="W">Wednesday</option>
+      <option value="R">Thursday</option>
+      <option value="F">Friday</option>
+      <option value="S">Saturday</option>
       <option value="U">Sunday</option>
     </select>
-    <input id="f-time" type="time" class="bg-raised text-tx text-[13px] rounded-[9px] px-3 py-1.5 border border-line focus:outline-none focus:border-blue/50 cursor-pointer" />
-    <select id="f-minfree" class="bg-raised text-tx text-[13px] rounded-[9px] px-3 py-1.5 border border-line focus:outline-none focus:border-blue/50 cursor-pointer">
+    <input id="f-time" type="time" class="ctrl"/>
+    <select id="f-minfree" class="ctrl">
       <option value="0">Any duration</option>
-      <option value="30">30 min+</option><option value="60">1 hr+</option>
-      <option value="90">1.5 hr+</option><option value="120">2 hr+</option>
+      <option value="30">30 min+</option>
+      <option value="60">1 hr+</option>
+      <option value="90">1.5 hr+</option>
+      <option value="120">2 hr+</option>
     </select>
-    <button id="btn-now" class="bg-blue text-white text-[13px] font-semibold rounded-[9px] px-4 py-1.5 hover:bg-blue/80 transition-colors">Now</button>
+    <button id="btn-now" class="btn-now">Now</button>
+    <a id="map-building-link" href="https://map.ucf.edu/" target="_blank" rel="noopener"
+       class="hidden text-[12px] font-medium transition-opacity hover:opacity-70 ml-1"
+       style="color:#ffc904;">
+      View on map ↗
+    </a>
   </div>
 
-  <!-- Status bar -->
+  <!-- status bar -->
   <div class="px-5 pt-4 pb-2 flex items-center justify-between">
-    <p id="status" class="text-[13px] text-tx2">Loading…</p>
-    <p id="result-count" class="text-[12px] text-tx2/50"></p>
+    <p id="status"       class="text-[13px]" style="color:#80808a;">Loading…</p>
+    <p id="result-count" class="text-[12px]" style="color:#48484f;"></p>
   </div>
 
-  <!-- Results -->
+  <!-- results grid -->
   <main id="results" class="px-5 pb-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3"></main>
 
-  <!-- Sheet backdrop -->
-  <div id="sheet-backdrop" class="hidden fixed inset-0 z-40 bg-black/50" onclick="closeSheet()"></div>
+</div><!-- /view-rooms -->
 
-  <!-- Detail sheet -->
-  <div id="sheet" class="hidden fixed bottom-0 left-0 right-0 z-50 bg-surface rounded-t-[20px] border-t border-line max-h-[90vh] overflow-y-auto sheet-enter">
-    <div class="flex justify-center pt-3 pb-1 sticky top-0 bg-surface z-10">
-      <div class="w-9 h-1 rounded-full bg-raised"></div>
-    </div>
-    <!-- Sheet header -->
-    <div class="flex items-start justify-between px-5 pt-2 pb-4 border-b border-line">
-      <div>
-        <h2 id="sheet-title" class="text-[24px] font-bold font-mono tracking-tight"></h2>
-        <p  id="sheet-sub"   class="text-[14px] text-tx2 mt-0.5"></p>
-        <p  id="sheet-status" class="text-[14px] mt-1 font-medium"></p>
-      </div>
-      <button onclick="closeSheet()" class="text-tx2 hover:text-tx text-[24px] w-8 h-8 flex items-center justify-center rounded-full hover:bg-raised transition-colors mt-1">×</button>
-    </div>
+<!-- ══════════════════════════════════════════════════════════════════════════
+     MAP VIEW
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div id="view-map" class="hidden">
+  <div class="px-5 py-3 flex items-center justify-between" style="border-bottom:1px solid #2a2a32;">
+    <p class="text-[13px]" style="color:#80808a;">UCF interactive campus map — search or click a building to explore</p>
+    <a href="https://map.ucf.edu/" target="_blank" rel="noopener"
+       class="text-[12px] font-medium transition-opacity hover:opacity-70 shrink-0 ml-4"
+       style="color:#ffc904;">Open full map ↗</a>
+  </div>
+  <iframe
+    src="https://map.ucf.edu/"
+    id="map-frame"
+    title="UCF Campus Map"
+    loading="lazy"
+    style="width:100%;height:calc(100vh - 152px);border:none;display:block;"
+  ></iframe>
+</div>
 
-    <!-- Week calendar -->
-    <div class="px-5 pt-4 pb-2">
-      <p class="text-[11px] font-semibold text-tx2/60 uppercase tracking-widest mb-3">Week at a glance</p>
-      <div class="wk-wrap rounded-xl overflow-hidden border border-line" style="max-height:360px">
-        <div class="wk-grid" id="wk-head">
-          <div class="wk-head-cell"></div>
-          <div class="wk-head-cell" id="wk-h-M">Mon</div>
-          <div class="wk-head-cell" id="wk-h-T">Tue</div>
-          <div class="wk-head-cell" id="wk-h-W">Wed</div>
-          <div class="wk-head-cell" id="wk-h-R">Thu</div>
-          <div class="wk-head-cell" id="wk-h-F">Fri</div>
-        </div>
-        <div class="wk-grid" id="wk-body" style="height:390px;position:relative;"></div>
-      </div>
-    </div>
+<!-- ══════════════════════════════════════════════════════════════════════════
+     DETAIL SHEET
+     ══════════════════════════════════════════════════════════════════════════ -->
+<div id="sheet-backdrop" class="hidden fixed inset-0 z-40" style="background:rgba(0,0,0,.6);" onclick="closeSheet()"></div>
 
-    <!-- Full list -->
-    <div class="px-5 pb-8 pt-3">
-      <p class="text-[11px] font-semibold text-tx2/60 uppercase tracking-widest mb-3">All class times</p>
-      <ul id="sheet-list" class="space-y-1.5"></ul>
+<div id="sheet" class="hidden fixed bottom-0 left-0 right-0 z-50 max-h-[90vh] overflow-y-auto sheet-enter"
+     style="background:#18181c;border-top:1px solid #2a2a32;border-radius:18px 18px 0 0;">
+
+  <!-- drag handle -->
+  <div class="flex justify-center pt-3 pb-1 sticky top-0 z-10" style="background:#18181c;">
+    <div class="w-8 h-1 rounded-full" style="background:#2a2a32;"></div>
+  </div>
+
+  <!-- sheet header -->
+  <div class="flex items-start justify-between px-5 pt-2 pb-4" style="border-bottom:1px solid #2a2a32;">
+    <div>
+      <h2 id="sheet-title"  class="text-[26px] font-bold font-mono tracking-tight"></h2>
+      <p  id="sheet-sub"    class="text-[13px] mt-0.5" style="color:#80808a;"></p>
+      <p  id="sheet-status" class="text-[13px] mt-1.5 font-medium"></p>
+    </div>
+    <div class="flex items-center gap-2 mt-1">
+      <a id="sheet-map-link" href="https://map.ucf.edu/" target="_blank" rel="noopener"
+         class="text-[12px] font-medium px-3 py-1.5 rounded-lg transition-colors"
+         style="color:#ffc904;border:1px solid rgba(255,201,4,.2);background:rgba(255,201,4,.06);">
+        Map ↗
+      </a>
+      <button onclick="closeSheet()"
+              class="w-8 h-8 flex items-center justify-center rounded-full text-[20px] transition-colors"
+              style="color:#80808a;"
+              onmouseover="this.style.background='#222228';this.style.color='#ededf0'"
+              onmouseout="this.style.background='transparent';this.style.color='#80808a'">×</button>
     </div>
   </div>
 
-  <!-- Error -->
-  <div id="error-banner" class="hidden fixed bottom-4 left-4 right-4 z-50 bg-surface border border-red/30 text-[13px] px-4 py-3 rounded-2xl">
-    <span class="text-red font-semibold">Could not load data.</span>
-    <span class="text-tx2 ml-1">Make sure schedule.json is in the same folder.</span>
+  <!-- week calendar -->
+  <div class="px-5 pt-5 pb-2">
+    <p class="text-[10px] font-semibold uppercase tracking-widest mb-3" style="color:#48484f;">Week at a glance</p>
+    <div class="wk-wrap rounded-xl overflow-hidden" style="max-height:360px;border:1px solid #2a2a32;">
+      <div class="wk-grid" id="wk-head" style="background:#111116;">
+        <div class="wk-head-cell" style="background:#111116;"></div>
+        <div class="wk-head-cell" id="wk-h-M" style="background:#111116;">Mon</div>
+        <div class="wk-head-cell" id="wk-h-T" style="background:#111116;">Tue</div>
+        <div class="wk-head-cell" id="wk-h-W" style="background:#111116;">Wed</div>
+        <div class="wk-head-cell" id="wk-h-R" style="background:#111116;">Thu</div>
+        <div class="wk-head-cell" id="wk-h-F" style="background:#111116;">Fri</div>
+      </div>
+      <div class="wk-grid" id="wk-body" style="height:390px;position:relative;background:#111116;"></div>
+    </div>
   </div>
+
+  <!-- all class times -->
+  <div class="px-5 pb-8 pt-4">
+    <p class="text-[10px] font-semibold uppercase tracking-widest mb-3" style="color:#48484f;">All class times</p>
+    <ul id="sheet-list" class="space-y-1.5"></ul>
+  </div>
+
+</div>
+
+<!-- ── error banner ───────────────────────────────────────────────────────── -->
+<div id="error-banner" class="hidden fixed bottom-4 left-4 right-4 z-50 px-4 py-3 text-[13px] rounded-xl"
+     style="background:#18181c;border:1px solid rgba(248,113,113,.25);">
+  <span class="font-semibold" style="color:#f87171;">Could not load data.</span>
+  <span class="ml-1" style="color:#80808a;">Make sure schedule.json is in the same folder.</span>
+</div>
 
 <script>
 const DAY_CODES = ['U','M','T','W','R','F','S'];
 const DAY_NAMES = {M:'Monday',T:'Tuesday',W:'Wednesday',R:'Thursday',F:'Friday',S:'Saturday',U:'Sunday'};
 const DAY_SHORT = {M:'Mon',T:'Tue',W:'Wed',R:'Thu',F:'Fri',S:'Sat',U:'Sun'};
 const WK_DAYS   = ['M','T','W','R','F'];
-const TL_S = 7*60, TL_E = 22*60;          // 7 AM – 10 PM
-const PX_PER_MIN = 390 / (TL_E - TL_S);   // calendar height / total minutes
+const TL_S = 7*60, TL_E = 22*60;
+const PX_PER_MIN = 390 / (TL_E - TL_S);
 
 const toMin  = t => { const [h,m] = t.split(':').map(Number); return h*60+m; };
 const toAmPm = m => { const h=Math.floor(m/60),mn=m%60; return `${h%12||12}:${String(mn).padStart(2,'0')} ${h<12?'AM':'PM'}`; };
@@ -200,8 +331,50 @@ const todayCode = () => DAY_CODES[new Date().getDay()];
 const nowHHMM   = () => { const n=new Date(); return `${String(n.getHours()).padStart(2,'0')}:${String(n.getMinutes()).padStart(2,'0')}`; };
 
 let allRooms={}, buildings=[], scrapedAt='', sheetRoom=null;
+let mapLocations={};  // building-code → map URL, populated from locations.json
 
-// ── free rooms logic ──────────────────────────────────────────────────────────
+// ── map locations (fetch UCF map API to enable deep-linking) ──────────────
+async function loadMapLocations() {
+  try {
+    const res  = await fetch('https://map.ucf.edu/locations.json');
+    if(!res.ok) return;
+    const locs = await res.json();
+    // Build a lookup: normalized name → map URL
+    // UCF schedule uses codes like "ENG2", "BA2", "NSC" — try to match them
+    const idx = {};
+    (locs||[]).forEach(loc => {
+      if(!loc.profile_link) return;
+      // index by uppercased abbreviation, name words, and slug fragments
+      const slug = (loc.profile_link||'').split('/').filter(Boolean).pop()||'';
+      idx[slug.toUpperCase()] = loc.profile_link;
+      if(loc.abbreviation) idx[loc.abbreviation.toUpperCase()] = loc.profile_link;
+      // also try first letters of each word in name for acronym matching
+    });
+    mapLocations = idx;
+  } catch(_) { /* map links just won't show */ }
+}
+
+function mapUrlForBuilding(buildingCode) {
+  if(!buildingCode) return null;
+  const code = buildingCode.toUpperCase();
+  if(mapLocations[code]) return `https://map.ucf.edu${mapLocations[code]}`;
+  // try partial slug matches
+  for(const [k,v] of Object.entries(mapLocations)) {
+    if(k.startsWith(code) || code.startsWith(k)) return `https://map.ucf.edu${v}`;
+  }
+  return null;
+}
+
+// ── tab switching ─────────────────────────────────────────────────────────
+function switchTab(tab) {
+  const isRooms = tab === 'rooms';
+  document.getElementById('view-rooms').classList.toggle('hidden', !isRooms);
+  document.getElementById('view-map').classList.toggle('hidden',   isRooms);
+  document.getElementById('tab-rooms').classList.toggle('active',  isRooms);
+  document.getElementById('tab-map').classList.toggle('active',   !isRooms);
+}
+
+// ── free rooms logic ──────────────────────────────────────────────────────
 function findFree(day, qMin, bld, minFree) {
   return Object.values(allRooms)
     .filter(r => !bld || r.building===bld)
@@ -209,9 +382,9 @@ function findFree(day, qMin, bld, minFree) {
       const slots = r.slots.filter(s=>s.days.includes(day));
       const occ   = slots.find(s=>toMin(s.start)<=qMin && qMin<toMin(s.end));
       if(occ) return null;
-      const future  = slots.map(s=>toMin(s.start)).filter(t=>t>qMin).sort((a,b)=>a-b);
-      const nxt     = future.length ? future[0] : null;
-      const dur     = nxt!==null ? nxt-qMin : null;
+      const future = slots.map(s=>toMin(s.start)).filter(t=>t>qMin).sort((a,b)=>a-b);
+      const nxt    = future.length ? future[0] : null;
+      const dur    = nxt!==null ? nxt-qMin : null;
       if(minFree>0 && dur!==null && dur<minFree) return null;
       return {...r, freeUntil: nxt!==null?toAmPm(nxt):null, duration:dur};
     })
@@ -223,29 +396,26 @@ function findFree(day, qMin, bld, minFree) {
     });
 }
 
-// ── card mini-timeline ────────────────────────────────────────────────────────
+// ── card mini-timeline ────────────────────────────────────────────────────
 function buildMiniTl(room, day, qMin) {
-  const range  = TL_E - TL_S;
-  const slots  = room.slots.filter(s=>s.days.includes(day));
-  const nowPct = Math.max(0,Math.min(100,(qMin-TL_S)/range*100));
-
-  // free window: from qMin to next class (or end)
+  const range   = TL_E - TL_S;
+  const slots   = room.slots.filter(s=>s.days.includes(day));
+  const nowPct  = Math.max(0,Math.min(100,(qMin-TL_S)/range*100));
   const future  = slots.map(s=>toMin(s.start)).filter(t=>t>qMin).sort((a,b)=>a-b);
   const freeEnd = future.length ? future[0] : TL_E;
   const freeL   = Math.max(0,(qMin-TL_S)/range*100);
   const freeW   = Math.max(0,(freeEnd-qMin)/range*100);
-
-  let html = `<div class="mini-free" style="left:${freeL}%;width:${freeW}%"></div>`;
+  let html = `<div class="tl-free" style="left:${freeL}%;width:${freeW}%"></div>`;
   slots.forEach(s=>{
     const l = Math.max(0,(toMin(s.start)-TL_S)/range*100);
     const w = Math.min(100-l,(toMin(s.end)-toMin(s.start))/range*100);
-    html += `<div class="mini-slot" style="left:${l}%;width:${w}%"></div>`;
+    html += `<div class="tl-slot" style="left:${l}%;width:${w}%"></div>`;
   });
-  html += `<div class="mini-now" style="left:${nowPct}%"></div>`;
+  html += `<div class="tl-now" style="left:${nowPct}%"></div>`;
   return html;
 }
 
-// ── populate rooms dropdown ───────────────────────────────────────────────────
+// ── rooms dropdown ────────────────────────────────────────────────────────
 function populateRooms(bld) {
   const sel = document.getElementById('f-room');
   sel.innerHTML = '<option value="">All rooms</option>';
@@ -254,7 +424,16 @@ function populateRooms(bld) {
     .forEach(rm=>{ const o=document.createElement('option'); o.value=o.textContent=rm; sel.appendChild(o); });
 }
 
-// ── render ────────────────────────────────────────────────────────────────────
+// ── update "view on map" link ─────────────────────────────────────────────
+function updateMapLink(bld) {
+  const link = document.getElementById('map-building-link');
+  if(!bld) { link.classList.add('hidden'); return; }
+  const url = mapUrlForBuilding(bld);
+  link.href = url || 'https://map.ucf.edu/';
+  link.classList.remove('hidden');
+}
+
+// ── render ────────────────────────────────────────────────────────────────
 function render() {
   const bld     = document.getElementById('f-building').value;
   const roomSel = document.getElementById('f-room').value;
@@ -267,11 +446,11 @@ function render() {
   if(roomMode) {
     const r = allRooms[`${bld}-${roomSel}`] ||
               Object.values(allRooms).find(r=>r.building===bld&&r.room===roomSel);
-    if(!r){ rows=[]; }
+    if(!r) { rows=[]; }
     else {
       const slots = r.slots.filter(s=>s.days.includes(day));
       const occ   = slots.find(s=>toMin(s.start)<=qMin&&qMin<toMin(s.end));
-      if(occ) rows=[{...r,occupied:true, freeUntil:toAmPm(toMin(occ.end)), duration:toMin(occ.end)-qMin}];
+      if(occ) rows=[{...r,occupied:true,  freeUntil:toAmPm(toMin(occ.end)), duration:toMin(occ.end)-qMin}];
       else {
         const future = slots.map(s=>toMin(s.start)).filter(t=>t>qMin).sort((a,b)=>a-b);
         const nxt    = future.length?future[0]:null;
@@ -288,40 +467,41 @@ function render() {
 
   const grid = document.getElementById('results');
   grid.innerHTML = '';
-  if(!rows.length){
-    grid.innerHTML=`<p class="col-span-full text-center text-tx2 py-16 text-[14px]">No rooms found.</p>`;
+  if(!rows.length) {
+    grid.innerHTML=`<p class="col-span-full text-center py-16 text-[14px]" style="color:#80808a;">No rooms found.</p>`;
     return;
   }
 
   rows.forEach(r=>{
     const isOcc = roomMode && r.occupied;
     const btn   = document.createElement('button');
-    btn.className = `card ${isOcc?'occ':''} p-3.5 text-left flex flex-col gap-2 w-full focus:outline-none focus:ring-2 focus:ring-blue/40`;
+    btn.className = `room-card ${isOcc?'is-occ':''}`;
 
-    let desc;
-    if(isOcc)           desc = `Free at ${r.freeUntil} · ${fmtDur(r.duration)} left`;
-    else if(!r.freeUntil) desc = 'No more classes today';
-    else                desc = `Free for ${fmtDur(r.duration)} · next at ${r.freeUntil}`;
+    const pillHtml = isOcc
+      ? `<span class="pill pill-occ">occupied</span>`
+      : `<span class="pill pill-free">${r.freeUntil ? fmtDur(r.duration) : 'all day'}</span>`;
 
-    const durLabel = isOcc
-      ? `<span class="text-[11px] font-semibold text-red">occupied</span>`
-      : `<span class="text-[11px] font-semibold text-green">${r.freeUntil ? fmtDur(r.duration) : 'all day'}</span>`;
+    const descHtml = isOcc
+      ? `Free at ${r.freeUntil} · ${fmtDur(r.duration)} left`
+      : r.freeUntil
+        ? `Until ${r.freeUntil}`
+        : 'No more classes today';
 
     btn.innerHTML = `
-      <div class="flex items-start justify-between gap-1">
-        <span class="text-[12px] text-tx2 font-medium">${r.building}</span>
-        ${durLabel}
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:6px;">
+        <span style="font-size:.75rem;color:#80808a;font-weight:500;letter-spacing:.01em;">${r.building}</span>
+        ${pillHtml}
       </div>
-      <span class="font-mono font-bold text-[20px] leading-none">${r.room}</span>
-      <div class="mini-tl w-full">${buildMiniTl(r,day,qMin)}</div>
-      <span class="text-[11px] text-tx2">${isOcc ? `free at ${r.freeUntil}` : r.freeUntil ? `until ${r.freeUntil}` : 'no more classes today'}</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.25rem;line-height:1;color:#ededf0;">${r.room}</span>
+      <div class="tl">${buildMiniTl(r,day,qMin)}</div>
+      <span style="font-size:.7rem;color:#80808a;">${descHtml}</span>
     `;
     btn.addEventListener('click', ()=>openSheet(r,day,qMin));
     grid.appendChild(btn);
   });
 }
 
-// ── sheet ─────────────────────────────────────────────────────────────────────
+// ── detail sheet ──────────────────────────────────────────────────────────
 function openSheet(room, day, qMin) {
   sheetRoom = room;
   buildSheet(day, qMin);
@@ -329,15 +509,19 @@ function openSheet(room, day, qMin) {
   const s = document.getElementById('sheet');
   s.classList.remove('hidden');
   s.classList.add('sheet-enter');
-  setTimeout(()=>s.classList.remove('sheet-enter'),220);
+  setTimeout(()=>s.classList.remove('sheet-enter'), 200);
 }
 
 function buildSheet(day, qMin) {
   const r = sheetRoom;
 
-  // Header
   document.getElementById('sheet-title').textContent = `${r.building} ${r.room}`;
   document.getElementById('sheet-sub').textContent   = `${DAY_NAMES[day]} at ${toAmPm(qMin)}`;
+
+  // update map link for this building
+  const mapUrl = mapUrlForBuilding(r.building);
+  const sheetMapLink = document.getElementById('sheet-map-link');
+  sheetMapLink.href = mapUrl || 'https://map.ucf.edu/';
 
   const isToday = day===todayCode();
   const nowMin  = isToday ? qMin : -1;
@@ -346,66 +530,61 @@ function buildSheet(day, qMin) {
   const future  = slots.filter(s=>toMin(s.start)>nowMin);
 
   let st;
-  if(!isToday)        st = ``;
-  else if(occ)        st = `<span class="text-red">Occupied</span> · free at ${toAmPm(toMin(occ.end))} (${fmtDur(toMin(occ.end)-nowMin)})`;
-  else if(future.length) st = `<span class="text-green">Free</span> · next class ${toAmPm(toMin(future[0].start))} (${fmtDur(toMin(future[0].start)-nowMin)})`;
-  else if(slots.length)  st = `<span class="text-green">Free</span> · no more classes today`;
-  else                   st = `<span class="text-green">Free all day</span>`;
+  if(!isToday)           st = '';
+  else if(occ)           st = `<span style="color:#f87171;">Occupied</span> · free at ${toAmPm(toMin(occ.end))} (${fmtDur(toMin(occ.end)-nowMin)})`;
+  else if(future.length) st = `<span style="color:#34d399;">Free</span> · next class ${toAmPm(toMin(future[0].start))} (${fmtDur(toMin(future[0].start)-nowMin)})`;
+  else if(slots.length)  st = `<span style="color:#34d399;">Free</span> · no more classes today`;
+  else                   st = `<span style="color:#34d399;">Free all day</span>`;
   document.getElementById('sheet-status').innerHTML = st;
 
-  // Highlight today column headers
+  // today highlight
   WK_DAYS.forEach(d=>{
     const el = document.getElementById('wk-h-'+d);
     if(el) el.classList.toggle('today', d===todayCode());
   });
 
-  // Build week calendar body
+  // build week calendar body
   const body = document.getElementById('wk-body');
   body.innerHTML = '';
 
-  // Hour grid lines + time labels
+  // hour grid lines + time labels
   for(let h=0; h<=(TL_E-TL_S)/60; h++){
     const t = TL_S + h*60;
     if(t>TL_E) break;
     const top = (t-TL_S)*PX_PER_MIN;
-
-    // label (time col = col 1)
-    const lbl = document.createElement('div');
-    lbl.className = 'wk-time-col absolute text-[10px] text-tx2/50';
-    lbl.style.cssText = `top:${top-6}px;left:0;width:34px;`;
-    if(h>0) lbl.textContent = toAmPm(t).replace(':00','').replace(' AM',' AM').replace(' PM',' PM');
-    body.appendChild(lbl);
-
-    // horizontal line spanning all day cols
-    WK_DAYS.forEach((d,i)=>{
+    if(h>0){
+      const lbl = document.createElement('div');
+      lbl.className = 'wk-time-col absolute';
+      lbl.style.cssText = `top:${top-6}px;left:0;width:30px;`;
+      lbl.textContent = toAmPm(t).replace(':00','').replace(' AM','a').replace(' PM','p');
+      body.appendChild(lbl);
+    }
+    WK_DAYS.forEach((_,i)=>{
       const line = document.createElement('div');
       line.className = 'wk-hour-line absolute';
-      const colW = `calc((100% - 36px) / 5)`;
-      const colL = `calc(36px + ${i} * (100% - 36px) / 5)`;
-      line.style.cssText = `top:${top}px;left:${colL};width:${colW};`;
+      line.style.cssText = `top:${top}px;left:calc(32px + ${i} * (100% - 32px) / 5);width:calc((100% - 32px) / 5);`;
       body.appendChild(line);
     });
   }
 
-  // Occupied blocks
+  // occupied blocks + "now" line
   WK_DAYS.forEach((d,i)=>{
-    const colL = `calc(36px + ${i} * (100% - 36px) / 5)`;
-    const colW = `calc((100% - 36px) / 5)`;
+    const colL = `calc(32px + ${i} * (100% - 32px) / 5)`;
+    const colW = `calc((100% - 32px) / 5)`;
 
     (r.slots||[]).filter(s=>s.days.includes(d)).forEach(s=>{
       const top = (toMin(s.start)-TL_S)*PX_PER_MIN;
       const ht  = (toMin(s.end)-toMin(s.start))*PX_PER_MIN;
       const blk = document.createElement('div');
       blk.className = 'wk-occ absolute';
-      blk.style.cssText = `top:${top}px;height:${ht}px;left:${colL};width:${colW};padding:2px 4px;`;
-      if(ht>18) blk.textContent = `${toAmPm(toMin(s.start)).replace(':00','')}`;
+      blk.style.cssText = `top:${top}px;height:${ht}px;left:${colL};width:${colW};padding:2px 3px;`;
+      if(ht>18) blk.textContent = toAmPm(toMin(s.start)).replace(':00','').replace(' AM','a').replace(' PM','p');
       body.appendChild(blk);
     });
 
-    // "now" line for today
-    if(d===todayCode()&&isToday) {
+    if(d===todayCode() && isToday){
       const nowTop = (qMin-TL_S)*PX_PER_MIN;
-      if(nowTop>=0&&nowTop<=390){
+      if(nowTop>=0 && nowTop<=390){
         const line = document.createElement('div');
         line.className = 'wk-now-line absolute';
         line.style.cssText = `top:${nowTop}px;left:${colL};width:${colW};`;
@@ -417,20 +596,20 @@ function buildSheet(day, qMin) {
     }
   });
 
-  // All class times list
+  // all class times list
   const DAY_ORD = ['M','T','W','R','F','S','U'];
   const ul = document.getElementById('sheet-list');
   ul.innerHTML = '';
   const all = (r.slots||[]).slice().sort((a,b)=>toMin(a.start)-toMin(b.start));
   if(!all.length){
-    ul.innerHTML=`<li class="text-[13px] text-tx2">No classes scheduled.</li>`;
+    ul.innerHTML=`<li class="text-[13px]" style="color:#80808a;">No classes scheduled.</li>`;
   } else {
     all.forEach(s=>{
       const days = s.days.slice().sort((a,b)=>DAY_ORD.indexOf(a)-DAY_ORD.indexOf(b))
                          .map(d=>DAY_SHORT[d]||d).join(' · ');
       const li = document.createElement('li');
-      li.className='flex items-center justify-between rounded-xl px-4 py-2.5 text-[13px] bg-bg';
-      li.innerHTML=`<span class="font-mono">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span><span class="text-tx2 text-[12px]">${days}</span>`;
+      li.style.cssText = 'display:flex;align-items:center;justify-content:space-between;border-radius:10px;padding:10px 14px;font-size:.8125rem;background:#111116;';
+      li.innerHTML=`<span class="font-mono">${toAmPm(toMin(s.start))} – ${toAmPm(toMin(s.end))}</span><span style="color:#80808a;font-size:.75rem;">${days}</span>`;
       ul.appendChild(li);
     });
   }
@@ -439,56 +618,65 @@ function buildSheet(day, qMin) {
 function closeSheet(){
   document.getElementById('sheet').classList.add('hidden');
   document.getElementById('sheet-backdrop').classList.add('hidden');
-  sheetRoom=null;
+  sheetRoom = null;
 }
 
-// ── clock ─────────────────────────────────────────────────────────────────────
+// ── clock ─────────────────────────────────────────────────────────────────
 function tickClock(){
-  const n=new Date(),h=n.getHours(),m=n.getMinutes();
-  document.getElementById('live-time').textContent=
+  const n=new Date(), h=n.getHours(), m=n.getMinutes();
+  document.getElementById('live-time').textContent =
     `${DAY_SHORT[todayCode()]} ${h%12||12}:${String(m).padStart(2,'0')} ${h<12?'AM':'PM'}`;
 }
 
-// ── init ──────────────────────────────────────────────────────────────────────
+// ── init ──────────────────────────────────────────────────────────────────
 async function init(){
   document.getElementById('f-day').value  = todayCode();
   document.getElementById('f-time').value = nowHHMM();
 
   document.getElementById('f-building').addEventListener('change',()=>{
-    populateRooms(document.getElementById('f-building').value); render();
+    const bld = document.getElementById('f-building').value;
+    populateRooms(bld);
+    updateMapLink(bld);
+    render();
   });
   ['f-room','f-day','f-minfree'].forEach(id=>document.getElementById(id).addEventListener('change',render));
   document.getElementById('f-time').addEventListener('input',render);
   document.getElementById('btn-now').addEventListener('click',()=>{
-    document.getElementById('f-day').value=todayCode();
-    document.getElementById('f-time').value=nowHHMM();
+    document.getElementById('f-day').value  = todayCode();
+    document.getElementById('f-time').value = nowHHMM();
     render();
   });
 
   tickClock();
-  setInterval(tickClock,10000);
+  setInterval(tickClock, 10000);
+
+  // load map locations in background (non-blocking)
+  loadMapLocations();
 
   try {
     const res  = await fetch('./schedule.json');
     if(!res.ok) throw new Error(res.status);
     const data = await res.json();
-    allRooms  = data.rooms||{};
-    scrapedAt = data.scraped_at||'';
+    allRooms  = data.rooms  || {};
+    scrapedAt = data.scraped_at || '';
     buildings = [...new Set(Object.values(allRooms).map(r=>r.building))];
     const bSel = document.getElementById('f-building');
-    buildings.sort().forEach(b=>{ const o=document.createElement('option'); o.value=o.textContent=b; bSel.appendChild(o); });
+    buildings.sort().forEach(b=>{
+      const o=document.createElement('option'); o.value=o.textContent=b; bSel.appendChild(o);
+    });
     if(scrapedAt){
-      const ago=Math.floor((Date.now()-new Date(scrapedAt))/86400000);
-      document.getElementById('data-age').textContent=`Updated ${ago===0?'today':ago===1?'yesterday':ago+' days ago'}`;
+      const ago = Math.floor((Date.now()-new Date(scrapedAt))/86400000);
+      document.getElementById('data-age').textContent =
+        `Updated ${ago===0?'today':ago===1?'yesterday':ago+' days ago'}`;
     }
     render();
   } catch(e){
-    document.getElementById('status').textContent='Failed to load data.';
+    document.getElementById('status').textContent = 'Failed to load data.';
     document.getElementById('error-banner').classList.remove('hidden');
   }
 }
 
-document.addEventListener('DOMContentLoaded',init);
+document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>
