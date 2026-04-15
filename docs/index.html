@@ -339,16 +339,18 @@ async function loadMapLocations() {
     const res  = await fetch('https://map.ucf.edu/locations.json');
     if(!res.ok) return;
     const locs = await res.json();
-    // Build a lookup: normalized name → map URL
-    // UCF schedule uses codes like "ENG2", "BA2", "NSC" — try to match them
+    // Build a lookup: building abbreviation/slug → map deep-link URL using ?id=
+    // UCF schedule uses codes like "ENG2", "BA2", "NSC"
     const idx = {};
     (locs||[]).forEach(loc => {
-      if(!loc.profile_link) return;
-      // index by uppercased abbreviation, name words, and slug fragments
-      const slug = (loc.profile_link||'').split('/').filter(Boolean).pop()||'';
-      idx[slug.toUpperCase()] = loc.profile_link;
-      if(loc.abbreviation) idx[loc.abbreviation.toUpperCase()] = loc.profile_link;
-      // also try first letters of each word in name for acronym matching
+      if(!loc.id) return;
+      const url = `https://map.ucf.edu/?id=${loc.id}`;
+      if(loc.abbreviation) idx[loc.abbreviation.toUpperCase()] = url;
+      // also index by slug derived from profile_link path
+      if(loc.profile_link) {
+        const slug = loc.profile_link.split('/').filter(Boolean).pop()||'';
+        if(slug) idx[slug.toUpperCase()] = url;
+      }
     });
     mapLocations = idx;
   } catch(_) { /* map links just won't show */ }
@@ -357,10 +359,10 @@ async function loadMapLocations() {
 function mapUrlForBuilding(buildingCode) {
   if(!buildingCode) return null;
   const code = buildingCode.toUpperCase();
-  if(mapLocations[code]) return `https://map.ucf.edu${mapLocations[code]}`;
-  // try partial slug matches
+  if(mapLocations[code]) return mapLocations[code];
+  // try partial matches (e.g. "NSC" matching "NSC-O" slug fragments)
   for(const [k,v] of Object.entries(mapLocations)) {
-    if(k.startsWith(code) || code.startsWith(k)) return `https://map.ucf.edu${v}`;
+    if(k.startsWith(code) || code.startsWith(k)) return v;
   }
   return null;
 }
