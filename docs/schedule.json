@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-05-11T13:59:28.830608",
+  "scraped_at": "2026-05-18T14:43:01.060917",
   "rooms": {
     "PSY-0105": {
       "building": "PSY",
@@ -156,6 +156,15 @@
           "end": "17:50",
           "course": "QMB 3200",
           "title": "Quantitative Business Tools II"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "QMB 3602",
+          "title": "Business Research for Decision Making"
         },
         {
           "days": [
@@ -357,15 +366,6 @@
           "end": "11:20",
           "course": "GEB 4223",
           "title": "Business Interviewing Techniques"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "QMB 3602",
-          "title": "Business Research for Decision Making"
         },
         {
           "days": [
@@ -1753,16 +1753,6 @@
         },
         {
           "days": [
-            "T",
-            "R"
-          ],
-          "start": "08:00",
-          "end": "09:50",
-          "course": "EGN 3331C",
-          "title": "Mechanics of Materials"
-        },
-        {
-          "days": [
             "M",
             "W"
           ],
@@ -2011,8 +2001,25 @@
       "slots": [
         {
           "days": [
-            "T",
             "R"
+          ],
+          "start": "17:30",
+          "end": "21:20",
+          "course": "EDA 6502",
+          "title": "Instructional Leadership in Schools and School Districts"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "17:30",
+          "end": "21:20",
+          "course": "EDA 6502",
+          "title": "Instructional Leadership in Schools and School Districts"
+        },
+        {
+          "days": [
+            "T"
           ],
           "start": "17:30",
           "end": "21:20",
@@ -2147,6 +2154,15 @@
           "end": "21:50",
           "course": "SOW 3620",
           "title": "Culturally Competent Social Work Practice"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "14:30",
+          "end": "17:20",
+          "course": "CGN 3700C",
+          "title": "Civil Engineering Measurements"
         }
       ]
     },
@@ -2162,6 +2178,24 @@
           "end": "21:20",
           "course": "EDH 6407",
           "title": "Ethical and Legal Issues in Student Personnel"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "14:30",
+          "end": "17:20",
+          "course": "EGN 3331C",
+          "title": "Mechanics of Materials"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "14:30",
+          "end": "17:20",
+          "course": "EGN 3331C",
+          "title": "Mechanics of Materials"
         },
         {
           "days": [
@@ -2355,6 +2389,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "16:30",
+          "end": "18:20",
+          "course": "EGN 3310",
+          "title": "Engineering Analysis-Statics"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -2430,69 +2474,20 @@
         }
       ]
     },
-    "BA1-O115": {
-      "building": "BA1",
-      "room": "O115",
-      "slots": [
-        {
-          "days": [
-            "W"
-          ],
-          "start": "14:30",
-          "end": "17:20",
-          "course": "EGN 3331C",
-          "title": "Mechanics of Materials"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "11:30",
-          "end": "14:20",
-          "course": "EGN 3331C",
-          "title": "Mechanics of Materials"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "14:30",
-          "end": "17:20",
-          "course": "EGN 3331C",
-          "title": "Mechanics of Materials"
-        }
-      ]
-    },
-    "HS1-O119": {
-      "building": "HS1",
-      "room": "O119",
+    "CB2-O204": {
+      "building": "CB2",
+      "room": "O204",
       "slots": [
         {
           "days": [
             "T",
             "R"
           ],
-          "start": "10:00",
-          "end": "11:50",
-          "course": "EGN 3365",
-          "title": "Structure and Properties of Materials"
+          "start": "08:00",
+          "end": "09:50",
+          "course": "EGN 3331C",
+          "title": "Mechanics of Materials"
         },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "14:00",
-          "end": "15:20",
-          "course": "MAC 1140C",
-          "title": "Pre-Calculus Algebra"
-        }
-      ]
-    },
-    "CB2-O204": {
-      "building": "CB2",
-      "room": "O204",
-      "slots": [
         {
           "days": [
             "M",
@@ -2541,6 +2536,47 @@
           "end": "11:50",
           "course": "OSE 4951",
           "title": "Senior Design I"
+        }
+      ]
+    },
+    "MSB-0108": {
+      "building": "MSB",
+      "room": "0108",
+      "slots": [
+        {
+          "days": [
+            "R"
+          ],
+          "start": "11:30",
+          "end": "14:20",
+          "course": "EGN 3331C",
+          "title": "Mechanics of Materials"
+        }
+      ]
+    },
+    "HS1-O119": {
+      "building": "HS1",
+      "room": "O119",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:00",
+          "end": "11:50",
+          "course": "EGN 3365",
+          "title": "Structure and Properties of Materials"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:00",
+          "end": "15:20",
+          "course": "MAC 1140C",
+          "title": "Pre-Calculus Algebra"
         }
       ]
     },
@@ -3203,6 +3239,24 @@
         }
       ]
     },
+    "VAB-0104": {
+      "building": "VAB",
+      "room": "0104",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "T",
+            "W",
+            "R"
+          ],
+          "start": "13:00",
+          "end": "16:50",
+          "course": "GRA 4196C",
+          "title": "Advanced Graphic Design"
+        }
+      ]
+    },
     "TA-0203": {
       "building": "TA",
       "room": "0203",
@@ -3270,6 +3324,21 @@
         }
       ]
     },
+    "TCH-0335": {
+      "building": "TCH",
+      "room": "0335",
+      "slots": [
+        {
+          "days": [
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "IDS 3955",
+          "title": "Study Abroad"
+        }
+      ]
+    },
     "VW11-0116": {
       "building": "VW11",
       "room": "0116",
@@ -3318,9 +3387,9 @@
         }
       ]
     },
-    "VAB-0109": {
-      "building": "VAB",
-      "room": "0109",
+    "BA1-O126": {
+      "building": "BA1",
+      "room": "O126",
       "slots": [
         {
           "days": [
@@ -3331,6 +3400,16 @@
           "end": "11:50",
           "course": "MAN 3301",
           "title": "Strategic Human Resource Management"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "18:00",
+          "end": "21:50",
+          "course": "MAR 4832",
+          "title": "Product Management"
         }
       ]
     },
@@ -3396,6 +3475,15 @@
           "end": "13:50",
           "course": "MAC 2311C",
           "title": "Calculus with Analytic Geometry I"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "12:00",
+          "end": "13:50",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
         }
       ]
     },
@@ -3426,8 +3514,8 @@
           "days": [
             "F"
           ],
-          "start": "14:00",
-          "end": "15:50",
+          "start": "10:00",
+          "end": "11:50",
           "course": "MAC 2311C",
           "title": "Calculus with Analytic Geometry I"
         },
@@ -3435,8 +3523,8 @@
           "days": [
             "F"
           ],
-          "start": "10:00",
-          "end": "11:50",
+          "start": "12:00",
+          "end": "13:50",
           "course": "MAC 2311C",
           "title": "Calculus with Analytic Geometry I"
         },
@@ -3975,15 +4063,6 @@
           "end": "20:50",
           "course": "AMH 6935",
           "title": "Seminar on Jim Crow America"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "15:45",
-          "end": "17:15",
-          "course": "MHS 6830",
-          "title": "Counseling Internship"
         }
       ]
     },
@@ -4290,24 +4369,6 @@
           "end": "12:20",
           "course": "CYP 6948C",
           "title": "Psychology Internship"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "13:30",
-          "end": "15:20",
-          "course": "CLP 6459C",
-          "title": "Human Sexuality, Marriage, and Sex Therapies"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "15:30",
-          "end": "16:20",
-          "course": "CLP 6459C",
-          "title": "Human Sexuality, Marriage, and Sex Therapies"
         }
       ]
     },
@@ -5082,16 +5143,6 @@
         },
         {
           "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "CGN 3700C",
-          "title": "Civil Engineering Measurements"
-        },
-        {
-          "days": [
             "W"
           ],
           "start": "19:30",
@@ -5214,22 +5265,6 @@
           "end": "13:50",
           "course": "OSE 4953",
           "title": "Senior Design Double Major ECE"
-        }
-      ]
-    },
-    "BA1-O126": {
-      "building": "BA1",
-      "room": "O126",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "18:00",
-          "end": "21:50",
-          "course": "MAR 4832",
-          "title": "Product Management"
         }
       ]
     },
@@ -5365,38 +5400,6 @@
         }
       ]
     },
-    "TA-0130": {
-      "building": "TA",
-      "room": "0130",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "T",
-            "W",
-            "R",
-            "F"
-          ],
-          "start": "08:00",
-          "end": "16:50",
-          "course": "MHS 6421",
-          "title": "Foundations of Play Therapy Theories and Techniques for Individuals and Groups"
-        },
-        {
-          "days": [
-            "M",
-            "T",
-            "W",
-            "R",
-            "F"
-          ],
-          "start": "08:00",
-          "end": "16:50",
-          "course": "MHS 6938",
-          "title": "Special Topics"
-        }
-      ]
-    },
     "TA-0322": {
       "building": "TA",
       "room": "0322",
@@ -5427,6 +5430,25 @@
         }
       ]
     },
+    "TA-0130": {
+      "building": "TA",
+      "room": "0130",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "T",
+            "W",
+            "R",
+            "F"
+          ],
+          "start": "08:00",
+          "end": "16:50",
+          "course": "MHS 6938",
+          "title": "Special Topics"
+        }
+      ]
+    },
     "ED-0176": {
       "building": "ED",
       "room": "0176",
@@ -5440,6 +5462,22 @@
           "end": "19:50",
           "course": "PET 3820",
           "title": "Teaching Sports Skills I"
+        }
+      ]
+    },
+    "HPH-O310": {
+      "building": "HPH",
+      "room": "O310",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "13:00",
+          "end": "15:50",
+          "course": "POS 3703",
+          "title": "Scope and Methods of Political Science"
         }
       ]
     },
@@ -6479,22 +6517,6 @@
         }
       ]
     },
-    "D530-0209": {
-      "building": "D530",
-      "room": "0209",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "09:00",
-          "end": "14:50",
-          "course": "PGY 3821C",
-          "title": "Advanced Digital Printing"
-        }
-      ]
-    },
     "HS1-O106": {
       "building": "HS1",
       "room": "O106",
@@ -6825,6 +6847,72 @@
         }
       ]
     },
+    "CB1-O104": {
+      "building": "CB1",
+      "room": "O104",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "CGN 3700C",
+          "title": "Civil Engineering Measurements"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "COP 3223C",
+          "title": "Introduction to Programming with C"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "18:00",
+          "end": "19:50",
+          "course": "COP 3330",
+          "title": "Object Oriented Programming"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "COP 3330",
+          "title": "Object Oriented Programming"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:50",
+          "course": "COP 3502C",
+          "title": "Computer Science I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "16:00",
+          "end": "17:45",
+          "course": "COP 3503C",
+          "title": "Computer Science II"
+        }
+      ]
+    },
     "CROL-0266": {
       "building": "CROL",
       "room": "0266",
@@ -6876,59 +6964,27 @@
         }
       ]
     },
-    "CB1-O104": {
-      "building": "CB1",
-      "room": "O104",
+    "WDPC-4206": {
+      "building": "WDPC",
+      "room": "4206",
       "slots": [
         {
           "days": [
-            "M",
-            "W"
+            "T"
           ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "COP 3223C",
-          "title": "Introduction to Programming with C"
+          "start": "13:30",
+          "end": "15:20",
+          "course": "CLP 6459C",
+          "title": "Human Sexuality, Marriage, and Sex Therapies"
         },
         {
           "days": [
-            "M",
-            "W"
+            "T"
           ],
-          "start": "18:00",
-          "end": "19:50",
-          "course": "COP 3330",
-          "title": "Object Oriented Programming"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "COP 3330",
-          "title": "Object Oriented Programming"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "12:00",
-          "end": "13:50",
-          "course": "COP 3502C",
-          "title": "Computer Science I"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "16:00",
-          "end": "17:45",
-          "course": "COP 3503C",
-          "title": "Computer Science II"
+          "start": "15:30",
+          "end": "16:20",
+          "course": "CLP 6459C",
+          "title": "Human Sexuality, Marriage, and Sex Therapies"
         }
       ]
     },
@@ -7157,6 +7213,15 @@
           "end": "17:20",
           "course": "CWR 4202C",
           "title": "Hydraulics"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "11:30",
+          "end": "14:20",
+          "course": "CWR 4202C",
+          "title": "Hydraulics"
         }
       ]
     },
@@ -7246,21 +7311,6 @@
     "NSC-O116": {
       "building": "NSC",
       "room": "O116",
-      "slots": [
-        {
-          "days": [
-            "F"
-          ],
-          "start": "13:00",
-          "end": "14:50",
-          "course": "MAC 2311C",
-          "title": "Calculus with Analytic Geometry I"
-        }
-      ]
-    },
-    "NSC-O114": {
-      "building": "NSC",
-      "room": "O114",
       "slots": [
         {
           "days": [
@@ -7371,136 +7421,6 @@
         }
       ]
     },
-    "CB2-O207": {
-      "building": "CB2",
-      "room": "O207",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "08:00",
-          "end": "09:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "M",
-            "T",
-            "W",
-            "R"
-          ],
-          "start": "11:00",
-          "end": "12:50",
-          "course": "PCB 3063",
-          "title": "Genetics"
-        }
-      ]
-    },
-    "HS2-0305": {
-      "building": "HS2",
-      "room": "0305",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "10:00",
-          "end": "11:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "08:00",
-          "end": "11:50",
-          "course": "PCB 3233L",
-          "title": "Immunology Laboratory"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "14:00",
-          "end": "17:50",
-          "course": "PCB 3233L",
-          "title": "Immunology Laboratory"
-        }
-      ]
-    },
-    "HS2-0302": {
-      "building": "HS2",
-      "room": "0302",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "10:00",
-          "end": "11:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "16:00",
-          "end": "17:50",
-          "course": "MCB 3020C",
-          "title": "General Microbiology"
-        }
-      ]
-    },
     "CROL-A210": {
       "building": "CROL",
       "room": "A210",
@@ -7581,6 +7501,24 @@
           "end": "15:50",
           "course": "PCB 4683L",
           "title": "Evolutionary Biology Lab"
+        }
+      ]
+    },
+    "CB2-O207": {
+      "building": "CB2",
+      "room": "O207",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "T",
+            "W",
+            "R"
+          ],
+          "start": "11:00",
+          "end": "12:50",
+          "course": "PCB 3063",
+          "title": "Genetics"
         }
       ]
     },
@@ -7680,15 +7618,6 @@
         },
         {
           "days": [
-            "R"
-          ],
-          "start": "14:00",
-          "end": "16:50",
-          "course": "PCB 3063L",
-          "title": "Genetics Laboratory"
-        },
-        {
-          "days": [
             "F"
           ],
           "start": "14:00",
@@ -7698,9 +7627,9 @@
         }
       ]
     },
-    "HS2-0205": {
+    "HS2-0305": {
       "building": "HS2",
-      "room": "0205",
+      "room": "0305",
       "slots": [
         {
           "days": [
@@ -7721,7 +7650,13 @@
           "end": "17:50",
           "course": "PCB 3233L",
           "title": "Immunology Laboratory"
-        },
+        }
+      ]
+    },
+    "HS2-0205": {
+      "building": "HS2",
+      "room": "0205",
+      "slots": [
         {
           "days": [
             "M",
@@ -8026,92 +7961,6 @@
           "end": "11:50",
           "course": "SYO 4400H",
           "title": "Honors Medical Sociology"
-        }
-      ]
-    },
-    "CB1-O313": {
-      "building": "CB1",
-      "room": "O313",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "16:00",
-          "end": "17:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "10:00",
-          "end": "11:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "10:00",
-          "end": "11:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "12:00",
-          "end": "13:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "16:00",
-          "end": "17:50",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
         }
       ]
     },
