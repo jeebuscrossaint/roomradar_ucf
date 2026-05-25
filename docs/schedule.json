@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-05-18T14:43:01.060917",
+  "scraped_at": "2026-05-25T14:51:12.249254",
   "rooms": {
     "PSY-0105": {
       "building": "PSY",
@@ -2348,8 +2348,8 @@
         }
       ]
     },
-    "VW11-0117": {
-      "building": "VW11",
+    "WV11-0117": {
+      "building": "WV11",
       "room": "0117",
       "slots": [
         {
@@ -3252,8 +3252,8 @@
           ],
           "start": "13:00",
           "end": "16:50",
-          "course": "GRA 4196C",
-          "title": "Advanced Graphic Design"
+          "course": "GRA 4154C",
+          "title": "Advanced Illustration"
         }
       ]
     },
@@ -3339,8 +3339,8 @@
         }
       ]
     },
-    "VW11-0116": {
-      "building": "VW11",
+    "WV11-0116": {
+      "building": "WV11",
       "room": "0116",
       "slots": [
         {
@@ -5338,6 +5338,15 @@
         {
           "days": [
             "R"
+          ],
+          "start": "15:45",
+          "end": "17:15",
+          "course": "MHS 6830",
+          "title": "Counseling Internship"
+        },
+        {
+          "days": [
+            "T"
           ],
           "start": "15:45",
           "end": "17:15",
@@ -7421,6 +7430,146 @@
         }
       ]
     },
+    "CB2-O207": {
+      "building": "CB2",
+      "room": "O207",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "08:00",
+          "end": "09:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "T",
+            "W",
+            "R"
+          ],
+          "start": "11:00",
+          "end": "12:50",
+          "course": "PCB 3063",
+          "title": "Genetics"
+        }
+      ]
+    },
+    "HS2-0305": {
+      "building": "HS2",
+      "room": "0305",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:00",
+          "end": "11:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "16:00",
+          "end": "17:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "08:00",
+          "end": "11:50",
+          "course": "PCB 3233L",
+          "title": "Immunology Laboratory"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "14:00",
+          "end": "17:50",
+          "course": "PCB 3233L",
+          "title": "Immunology Laboratory"
+        }
+      ]
+    },
+    "HS2-0302": {
+      "building": "HS2",
+      "room": "0302",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:00",
+          "end": "11:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "16:00",
+          "end": "17:50",
+          "course": "MCB 3020C",
+          "title": "General Microbiology"
+        }
+      ]
+    },
     "CROL-A210": {
       "building": "CROL",
       "room": "A210",
@@ -7501,24 +7650,6 @@
           "end": "15:50",
           "course": "PCB 4683L",
           "title": "Evolutionary Biology Lab"
-        }
-      ]
-    },
-    "CB2-O207": {
-      "building": "CB2",
-      "room": "O207",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "T",
-            "W",
-            "R"
-          ],
-          "start": "11:00",
-          "end": "12:50",
-          "course": "PCB 3063",
-          "title": "Genetics"
         }
       ]
     },
@@ -7627,9 +7758,9 @@
         }
       ]
     },
-    "HS2-0305": {
+    "HS2-0205": {
       "building": "HS2",
-      "room": "0305",
+      "room": "0205",
       "slots": [
         {
           "days": [
@@ -7650,13 +7781,7 @@
           "end": "17:50",
           "course": "PCB 3233L",
           "title": "Immunology Laboratory"
-        }
-      ]
-    },
-    "HS2-0205": {
-      "building": "HS2",
-      "room": "0205",
-      "slots": [
+        },
         {
           "days": [
             "M",
