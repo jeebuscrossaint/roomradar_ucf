@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-05-25T14:51:12.249254",
+  "scraped_at": "2026-06-01T16:35:20.960953",
   "rooms": {
     "PSY-0105": {
       "building": "PSY",
@@ -5474,22 +5474,6 @@
         }
       ]
     },
-    "HPH-O310": {
-      "building": "HPH",
-      "room": "O310",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "13:00",
-          "end": "15:50",
-          "course": "POS 3703",
-          "title": "Scope and Methods of Political Science"
-        }
-      ]
-    },
     "TA-0221": {
       "building": "TA",
       "room": "0221",
@@ -6023,103 +6007,6 @@
           "end": "14:50",
           "course": "PHT 6115C",
           "title": "Gross Anatomy/Neuroscience I"
-        }
-      ]
-    },
-    "TA-0222": {
-      "building": "TA",
-      "room": "0222",
-      "slots": [
-        {
-          "days": [
-            "R"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "MAE 3311",
-          "title": "Elementary Mathematics for Teaching II"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "15:50",
-          "course": "LAE 4314",
-          "title": "Language Arts in the Elementary School"
         }
       ]
     },
@@ -7246,6 +7133,22 @@
           "end": "12:50",
           "course": "HFT 4944",
           "title": "Internship III"
+        }
+      ]
+    },
+    "TA-0222": {
+      "building": "TA",
+      "room": "0222",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "15:50",
+          "course": "LAE 4314",
+          "title": "Language Arts in the Elementary School"
         }
       ]
     },
