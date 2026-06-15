@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-06-08T15:28:24.210172",
+  "scraped_at": "2026-06-15T16:53:39.555371",
   "rooms": {
     "PSY-0105": {
       "building": "PSY",
@@ -2517,6 +2517,15 @@
           "end": "19:50",
           "course": "HSC 4501",
           "title": "Epidemiology of Chronic Diseases"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "12:00",
+          "end": "14:50",
+          "course": "ANT 2511",
+          "title": "Biological Anthropology"
         },
         {
           "days": [
@@ -6591,15 +6600,6 @@
         },
         {
           "days": [
-            "R"
-          ],
-          "start": "12:00",
-          "end": "14:50",
-          "course": "ANT 2511",
-          "title": "Biological Anthropology"
-        },
-        {
-          "days": [
             "M",
             "W"
           ],
@@ -7989,6 +7989,92 @@
           "end": "11:50",
           "course": "SYO 4400H",
           "title": "Honors Medical Sociology"
+        }
+      ]
+    },
+    "CB1-O313": {
+      "building": "CB1",
+      "room": "O313",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "16:00",
+          "end": "17:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:00",
+          "end": "11:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:00",
+          "end": "11:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "16:00",
+          "end": "17:50",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
         }
       ]
     },
