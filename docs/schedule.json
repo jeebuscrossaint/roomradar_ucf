@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-06-22T16:34:09.288868",
+  "scraped_at": "2026-06-29T15:29:28.222664",
   "rooms": {
     "PSY-0105": {
       "building": "PSY",
@@ -2984,9 +2984,9 @@
         }
       ]
     },
-    "BA2-0208": {
+    "BA2-0207": {
       "building": "BA2",
-      "room": "0208",
+      "room": "0207",
       "slots": [
         {
           "days": [
@@ -3009,6 +3009,27 @@
           "end": "21:50",
           "course": "MAR 4803",
           "title": "Marketing Management"
+        },
+        {
+          "days": [
+            "M",
+            "T",
+            "W",
+            "R"
+          ],
+          "start": "14:00",
+          "end": "15:50",
+          "course": "MAR 4841",
+          "title": "Services Marketing"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "STA 6704",
+          "title": "Data Mining Methodology II"
         }
       ]
     },
@@ -5274,33 +5295,6 @@
           "end": "13:50",
           "course": "OSE 4953",
           "title": "Senior Design Double Major ECE"
-        }
-      ]
-    },
-    "BA2-0207": {
-      "building": "BA2",
-      "room": "0207",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "T",
-            "W",
-            "R"
-          ],
-          "start": "14:00",
-          "end": "15:50",
-          "course": "MAR 4841",
-          "title": "Services Marketing"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "STA 6704",
-          "title": "Data Mining Methodology II"
         }
       ]
     },
