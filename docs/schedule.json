@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-08-03T14:10:10.314189",
+  "scraped_at": "2026-08-10T12:06:05.257906",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -229,15 +229,6 @@
         },
         {
           "days": [
-            "W"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "FIL 3115",
-          "title": "Short Script I"
-        },
-        {
-          "days": [
             "M",
             "W"
           ],
@@ -360,15 +351,6 @@
           ],
           "start": "15:00",
           "end": "17:45",
-          "course": "FIL 3485",
-          "title": "Directing Techniques for Film"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "09:00",
-          "end": "11:45",
           "course": "FIL 3485",
           "title": "Directing Techniques for Film"
         },
@@ -780,32 +762,12 @@
         },
         {
           "days": [
-            "M",
-            "W"
-          ],
-          "start": "10:30",
-          "end": "11:50",
-          "course": "ACG 3361",
-          "title": "Cost Accounting I"
-        },
-        {
-          "days": [
             "T"
           ],
           "start": "13:30",
           "end": "14:45",
           "course": "COM 4120",
           "title": "Organizational Communication"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "18:00",
-          "end": "19:15",
-          "course": "STA 5206",
-          "title": "Statistical Analysis"
         }
       ]
     },
@@ -1818,6 +1780,15 @@
           "end": "11:45",
           "course": "APK 2300",
           "title": "Injury Management and Emergency Care"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "12:00",
+          "end": "14:50",
+          "course": "GEB 3031",
+          "title": "Integrated Business Foundations"
         },
         {
           "days": [
@@ -3230,6 +3201,16 @@
           "end": "11:45",
           "course": "MAR 4804",
           "title": "Marketing Strategy"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:30",
+          "end": "11:50",
+          "course": "ACG 3361",
+          "title": "Cost Accounting I"
         },
         {
           "days": [
@@ -7386,15 +7367,6 @@
         },
         {
           "days": [
-            "T"
-          ],
-          "start": "09:00",
-          "end": "11:50",
-          "course": "RMI 4224",
-          "title": "Property and Casualty Insurance Products"
-        },
-        {
-          "days": [
             "M",
             "W"
           ],
@@ -7420,15 +7392,6 @@
           "end": "10:20",
           "course": "EGN 3331C",
           "title": "Mechanics of Materials"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "15:00",
-          "end": "16:15",
-          "course": "SPN 1121C",
-          "title": "Elementary Spanish Language and Civilization II"
         },
         {
           "days": [
@@ -10391,6 +10354,69 @@
         },
         {
           "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "T",
             "R"
           ],
@@ -10506,7 +10532,33 @@
         },
         {
           "days": [
-            "T",
+            "T"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "12:00",
@@ -10552,7 +10604,15 @@
         },
         {
           "days": [
-            "T",
+            "T"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "12:00",
@@ -10562,7 +10622,15 @@
         },
         {
           "days": [
-            "T",
+            "T"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "12:00",
@@ -10599,7 +10667,33 @@
         },
         {
           "days": [
-            "T",
+            "T"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "10:30",
@@ -10645,7 +10739,15 @@
         },
         {
           "days": [
-            "T",
+            "T"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "10:30",
@@ -10655,7 +10757,15 @@
         },
         {
           "days": [
-            "T",
+            "T"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HSC 4008",
+          "title": "Professional Development in Health Professions"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "10:30",
@@ -13843,9 +13953,9 @@
         }
       ]
     },
-    "DPAC-0215": {
+    "DPAC-0455": {
       "building": "DPAC",
-      "room": "0215",
+      "room": "0455",
       "slots": [
         {
           "days": [
@@ -13858,12 +13968,21 @@
         },
         {
           "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "EDA 6232",
+          "title": "Legal Aspects of School Operation"
+        },
+        {
+          "days": [
             "M"
           ],
           "start": "18:00",
           "end": "20:50",
-          "course": "PAD 7709",
-          "title": "Advanced Qualitative Methods for Public Administration and Policy"
+          "course": "MMC 6635",
+          "title": "Media and the Attention Economy"
         }
       ]
     },
@@ -14725,6 +14844,15 @@
         },
         {
           "days": [
+            "M"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "CAP 6614",
+          "title": "Current Topics in Machine Learning"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "10:30",
@@ -15562,6 +15690,15 @@
           "end": "11:45",
           "course": "MAD 4472",
           "title": "Introduction to Cryptography"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "RMI 4224",
+          "title": "Property and Casualty Insurance Products"
         },
         {
           "days": [
@@ -16658,6 +16795,15 @@
         },
         {
           "days": [
+            "F"
+          ],
+          "start": "09:00",
+          "end": "11:50",
+          "course": "GEB 4513",
+          "title": "Applied Business Technologies"
+        },
+        {
+          "days": [
             "M"
           ],
           "start": "12:00",
@@ -17584,33 +17730,6 @@
           "end": "17:45",
           "course": "MHS 2330",
           "title": "Career Planning I"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "SSE 3312",
-          "title": "Teaching Social Science in the Elementary School"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "SSE 4395",
-          "title": "Teaching with Primary Sources"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "LAE 4314",
-          "title": "Language Arts in the Elementary School"
         }
       ]
     },
@@ -17727,15 +17846,6 @@
         },
         {
           "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "EDS 6130",
-          "title": "Instructional Supervision II: Instructional Coaching and Mentoring"
-        },
-        {
-          "days": [
             "M",
             "W"
           ],
@@ -17758,15 +17868,6 @@
           "end": "12:45",
           "course": "MHS 7808",
           "title": "Internship in Counseling Supervision"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "CCJ 7096",
-          "title": "Seminar in Criminal Justice Systems"
         },
         {
           "days": [
@@ -18565,6 +18666,15 @@
           "days": [
             "F"
           ],
+          "start": "15:30",
+          "end": "16:50",
+          "course": "MUN 3431L",
+          "title": "Brass Quintet"
+        },
+        {
+          "days": [
+            "F"
+          ],
           "start": "13:30",
           "end": "15:20",
           "course": "MUN 3437",
@@ -19225,15 +19335,6 @@
           "end": "15:20",
           "course": "MUN 3427",
           "title": "Flute Ensemble"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "12:30",
-          "end": "13:20",
-          "course": "MUN 3431L",
-          "title": "Brass Quintet"
         },
         {
           "days": [
@@ -19901,6 +20002,21 @@
         }
       ]
     },
+    "DPAC-0215": {
+      "building": "DPAC",
+      "room": "0215",
+      "slots": [
+        {
+          "days": [
+            "M"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "PAD 7709",
+          "title": "Advanced Qualitative Methods for Public Administration and Policy"
+        }
+      ]
+    },
     "BA1-O122": {
       "building": "BA1",
       "room": "O122",
@@ -20425,132 +20541,6 @@
           "end": "10:15",
           "course": "REL 4180H",
           "title": "Honors Religion and Medicine"
-        }
-      ]
-    },
-    "NSC-O116": {
-      "building": "NSC",
-      "room": "O116",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "PHI 3931",
-          "title": "Special Topics"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "15:00",
-          "end": "16:15",
-          "course": "SPC 3602",
-          "title": "Advanced Public Communication"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "15:00",
-          "end": "16:45",
-          "course": "COM 4110",
-          "title": "Business and Professional Communication"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "FIN 3461",
-          "title": "Financial Statement Analysis"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "09:30",
-          "end": "10:20",
-          "course": "IDS 7690",
-          "title": "Frontiers in Biomedical Sciences"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "16:30",
-          "end": "18:20",
-          "course": "ISC 4323C",
-          "title": "Praxis for Data Science"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "10:30",
-          "end": "13:20",
-          "course": "SPA 6327",
-          "title": "Aural Habilitation Rehab"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "10:30",
-          "end": "11:45",
-          "course": "SPN 4410",
-          "title": "Advanced Spanish Conversation"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "07:30",
-          "end": "09:15",
-          "course": "MAC 2311C",
-          "title": "Calculus with Analytic Geometry I"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "09:30",
-          "end": "11:15",
-          "course": "MAC 2311C",
-          "title": "Calculus with Analytic Geometry I"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "11:30",
-          "end": "13:15",
-          "course": "MAC 2311C",
-          "title": "Calculus with Analytic Geometry I"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "13:30",
-          "end": "15:15",
-          "course": "MAC 2311C",
-          "title": "Calculus with Analytic Geometry I"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "08:30",
-          "end": "10:15",
-          "course": "MAC 2313",
-          "title": "Calculus with Analytic Geometry III"
         }
       ]
     },
@@ -22749,15 +22739,6 @@
         },
         {
           "days": [
-            "W"
-          ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "ENC 4434",
-          "title": "Visual and Material Rhetorics"
-        },
-        {
-          "days": [
             "T",
             "R"
           ],
@@ -23000,6 +22981,15 @@
         },
         {
           "days": [
+            "R"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "CCJ 7096",
+          "title": "Seminar in Criminal Justice Systems"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -23118,6 +23108,122 @@
           "end": "20:50",
           "course": "TPA 6187",
           "title": "Themed Experience Seminar"
+        }
+      ]
+    },
+    "NSC-O116": {
+      "building": "NSC",
+      "room": "O116",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "SPC 3602",
+          "title": "Advanced Public Communication"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:45",
+          "course": "COM 4110",
+          "title": "Business and Professional Communication"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "FIN 3461",
+          "title": "Financial Statement Analysis"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "09:30",
+          "end": "10:20",
+          "course": "IDS 7690",
+          "title": "Frontiers in Biomedical Sciences"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "16:30",
+          "end": "18:20",
+          "course": "ISC 4323C",
+          "title": "Praxis for Data Science"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "10:30",
+          "end": "13:20",
+          "course": "SPA 6327",
+          "title": "Aural Habilitation Rehab"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "SPN 4410",
+          "title": "Advanced Spanish Conversation"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "07:30",
+          "end": "09:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "09:30",
+          "end": "11:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "11:30",
+          "end": "13:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "15:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "08:30",
+          "end": "10:15",
+          "course": "MAC 2313",
+          "title": "Calculus with Analytic Geometry III"
         }
       ]
     },
@@ -27857,30 +27963,6 @@
         }
       ]
     },
-    "DPAC-0455": {
-      "building": "DPAC",
-      "room": "0455",
-      "slots": [
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "EDA 6232",
-          "title": "Legal Aspects of School Operation"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "MMC 6635",
-          "title": "Media and the Attention Economy"
-        }
-      ]
-    },
     "TA-0202B": {
       "building": "TA",
       "room": "0202B",
@@ -28826,6 +28908,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -29110,15 +29202,6 @@
           "end": "13:15",
           "course": "ENC 4353",
           "title": "Writing for Social Change"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "SPN 1121C",
-          "title": "Elementary Spanish Language and Civilization II"
         },
         {
           "days": [
@@ -30193,15 +30276,6 @@
           "end": "16:20",
           "course": "PEM 2127C",
           "title": "Pilates"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "11:30",
-          "end": "14:20",
-          "course": "PEM 2405",
-          "title": "Self Defense"
         },
         {
           "days": [
@@ -31576,58 +31650,6 @@
         }
       ]
     },
-    "DPAC-0251": {
-      "building": "DPAC",
-      "room": "0251",
-      "slots": [
-        {
-          "days": [
-            "R"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "EDS 6130",
-          "title": "Instructional Supervision II: Instructional Coaching and Mentoring"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "14:30",
-          "end": "15:45",
-          "course": "STA 2023",
-          "title": "Statistical Methods I"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TPA 6158",
-          "title": "Small Project Studio"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TPA 6187",
-          "title": "Themed Experience Seminar"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TPA 6437",
-          "title": "Careers in Themed Experience"
-        }
-      ]
-    },
     "NSC-O143D": {
       "building": "NSC",
       "room": "O143D",
@@ -32930,7 +32952,7 @@
             "W"
           ],
           "start": "09:30",
-          "end": "22:20",
+          "end": "10:20",
           "course": "PCB 6939",
           "title": "Topics in Genomics"
         }
@@ -33590,9 +33612,9 @@
         }
       ]
     },
-    "RSH-0210": {
+    "RSH-0106": {
       "building": "RSH",
-      "room": "0210",
+      "room": "0106",
       "slots": [
         {
           "days": [
@@ -33606,57 +33628,30 @@
         },
         {
           "days": [
-            "T"
-          ],
-          "start": "10:30",
-          "end": "11:45",
-          "course": "HFT 2750",
-          "title": "The Event Industry"
-        },
-        {
-          "days": [
-            "W"
+            "M"
           ],
           "start": "15:00",
           "end": "16:15",
-          "course": "HFT 3463",
-          "title": "Revenue Strategies in the Entertainment Industry"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "HFT 3512",
-          "title": "Event Promotion"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "HFT 3519",
-          "title": "Event Services"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "16:30",
-          "end": "17:45",
-          "course": "HMG 6596",
-          "title": "Strategic Marketing in Hospitality and Tourism"
+          "course": "HFT 3792",
+          "title": "Leading in the Entertainment Industry"
         },
         {
           "days": [
             "W"
           ],
-          "start": "10:00",
-          "end": "12:50",
-          "course": "HMG 7295",
-          "title": "Theories in Hospitality and Tourism"
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HFT 4464",
+          "title": "Hospitality Industry Finance"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "HFT 4542",
+          "title": "Strategic Event Design"
         }
       ]
     },
@@ -33736,8 +33731,7 @@
       "slots": [
         {
           "days": [
-            "M",
-            "W"
+            "M"
           ],
           "start": "16:30",
           "end": "17:45",
@@ -33831,6 +33825,66 @@
           "end": "19:15",
           "course": "HFT 4751",
           "title": "Managing the Employee Experience in the Theme Park and Attraction Industry"
+        }
+      ]
+    },
+    "RSH-0210": {
+      "building": "RSH",
+      "room": "0210",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "HFT 2750",
+          "title": "The Event Industry"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "HFT 3463",
+          "title": "Revenue Strategies in the Entertainment Industry"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "HFT 3512",
+          "title": "Event Promotion"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HFT 3519",
+          "title": "Event Services"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "16:30",
+          "end": "17:45",
+          "course": "HMG 6596",
+          "title": "Strategic Marketing in Hospitality and Tourism"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "10:00",
+          "end": "12:50",
+          "course": "HMG 7295",
+          "title": "Theories in Hospitality and Tourism"
         }
       ]
     },
@@ -33936,39 +33990,6 @@
           "end": "11:45",
           "course": "HFT 4394",
           "title": "Event Operations"
-        }
-      ]
-    },
-    "RSH-0106": {
-      "building": "RSH",
-      "room": "0106",
-      "slots": [
-        {
-          "days": [
-            "M"
-          ],
-          "start": "15:00",
-          "end": "16:15",
-          "course": "HFT 3792",
-          "title": "Leading in the Entertainment Industry"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "10:30",
-          "end": "11:45",
-          "course": "HFT 4464",
-          "title": "Hospitality Industry Finance"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "09:00",
-          "end": "10:15",
-          "course": "HFT 4542",
-          "title": "Strategic Event Design"
         }
       ]
     },
@@ -34421,7 +34442,7 @@
             "R"
           ],
           "start": "14:30",
-          "end": "15:20",
+          "end": "16:20",
           "course": "MCB 3020C",
           "title": "General Microbiology"
         }
@@ -35500,6 +35521,49 @@
           "end": "15:50",
           "course": "PHT 6118C",
           "title": "Gross Anatomy/Neuroscience II"
+        }
+      ]
+    },
+    "DPAC-0251": {
+      "building": "DPAC",
+      "room": "0251",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "14:30",
+          "end": "15:45",
+          "course": "STA 2023",
+          "title": "Statistical Methods I"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TPA 6158",
+          "title": "Small Project Studio"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TPA 6187",
+          "title": "Themed Experience Seminar"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TPA 6437",
+          "title": "Careers in Themed Experience"
         }
       ]
     },
