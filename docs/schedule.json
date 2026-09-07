@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-08-31T18:46:59.387016",
+  "scraped_at": "2026-09-07T16:49:03.262859",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -397,6 +397,15 @@
         },
         {
           "days": [
+            "W"
+          ],
+          "start": "16:30",
+          "end": "17:45",
+          "course": "APK 4103",
+          "title": "Kinetic Anatomy"
+        },
+        {
+          "days": [
             "T",
             "R"
           ],
@@ -525,6 +534,31 @@
           ],
           "start": "12:00",
           "end": "13:15",
+          "course": "AMH 2020",
+          "title": "U.S. History: 1877-Present"
+        }
+      ]
+    },
+    "UWCV-0302": {
+      "building": "UWCV",
+      "room": "0302",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "16:00",
+          "end": "17:15",
+          "course": "AMH 2020",
+          "title": "U.S. History: 1877-Present"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:30",
+          "end": "15:45",
           "course": "AMH 2020",
           "title": "U.S. History: 1877-Present"
         }
@@ -1300,15 +1334,6 @@
         {
           "days": [
             "M"
-          ],
-          "start": "16:30",
-          "end": "17:45",
-          "course": "APK 4103",
-          "title": "Kinetic Anatomy"
-        },
-        {
-          "days": [
-            "W"
           ],
           "start": "16:30",
           "end": "17:45",
@@ -2598,16 +2623,6 @@
           "end": "17:45",
           "course": "CAP 4630",
           "title": "Artificial Intelligence"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "COP 3402",
-          "title": "Systems Software"
         },
         {
           "days": [
@@ -6290,15 +6305,6 @@
         },
         {
           "days": [
-            "F"
-          ],
-          "start": "09:00",
-          "end": "11:45",
-          "course": "EGN 3310",
-          "title": "Engineering Analysis-Statics"
-        },
-        {
-          "days": [
             "M"
           ],
           "start": "10:30",
@@ -6546,26 +6552,6 @@
             "T",
             "R"
           ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "CHM 2045C",
-          "title": "Chemistry Fundamentals I"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "CHM 2046",
-          "title": "Chemistry Fundamentals II"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
           "start": "09:00",
           "end": "10:15",
           "course": "CHM 2046",
@@ -6656,15 +6642,6 @@
       "building": "ENG1",
       "room": "O168",
       "slots": [
-        {
-          "days": [
-            "R"
-          ],
-          "start": "19:30",
-          "end": "21:20",
-          "course": "EML 3303C",
-          "title": "Mechanical Engineering Measurements"
-        },
         {
           "days": [
             "S"
@@ -6957,16 +6934,6 @@
           "end": "10:15",
           "course": "PHI 2010H",
           "title": "Honors Introduction to Philosophy"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "SPC 1608H",
-          "title": "Honors Fundamentals of Oral Communication"
         },
         {
           "days": [
@@ -8067,15 +8034,6 @@
           "end": "13:15",
           "course": "HSA 3104",
           "title": "Health Services Administration Cornerstone"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "10:30",
-          "end": "11:20",
-          "course": "PHY 2049",
-          "title": "General Physics Using Calculus II"
         },
         {
           "days": [
@@ -10037,15 +9995,6 @@
         },
         {
           "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "FIN 7816",
-          "title": "Investment Theory"
-        },
-        {
-          "days": [
             "T",
             "R"
           ],
@@ -11964,15 +11913,6 @@
           "days": [
             "F"
           ],
-          "start": "09:30",
-          "end": "10:20",
-          "course": "COP 3402",
-          "title": "Systems Software"
-        },
-        {
-          "days": [
-            "F"
-          ],
           "start": "13:30",
           "end": "14:20",
           "course": "COP 3402",
@@ -12476,6 +12416,16 @@
           "end": "13:15",
           "course": "PHI 3681H",
           "title": "Honors AI and Big Data Ethics"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "ENC 1102",
+          "title": "Composition II"
         },
         {
           "days": [
@@ -13357,15 +13307,6 @@
           "end": "09:20",
           "course": "PHY 2049C",
           "title": "Honors General Physics Using Calculus II"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "11:30",
-          "end": "13:20",
-          "course": "PHY 2053L",
-          "title": "College Physics I Laboratory"
         },
         {
           "days": [
@@ -15848,6 +15789,31 @@
         }
       ]
     },
+    "CMB-O307": {
+      "building": "CMB",
+      "room": "O307",
+      "slots": [
+        {
+          "days": [
+            "F"
+          ],
+          "start": "08:30",
+          "end": "11:15",
+          "course": "ART 2203C",
+          "title": "Design Fundamentals-Three Dimensional"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "17:30",
+          "end": "20:15",
+          "course": "ART 2300C",
+          "title": "Drawing Fundamentals I"
+        }
+      ]
+    },
     "VAB-0210": {
       "building": "VAB",
       "room": "0210",
@@ -16432,9 +16398,9 @@
         }
       ]
     },
-    "TCH-0103": {
-      "building": "TCH",
-      "room": "0103",
+    "VAB-0104": {
+      "building": "VAB",
+      "room": "0104",
       "slots": [
         {
           "days": [
@@ -16447,39 +16413,13 @@
         },
         {
           "days": [
+            "M",
             "W"
           ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "ENT 4014",
-          "title": "New Venture Implementation"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "ENT 4014",
-          "title": "New Venture Implementation"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "REE 4103",
-          "title": "Real Estate Appraisal and Valuation"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "09:00",
-          "end": "10:15",
-          "course": "EVR 3085",
-          "title": "Interdisciplinary Research Methods for Environmental Studies"
+          "start": "11:00",
+          "end": "13:50",
+          "course": "GRA 3835",
+          "title": "Advanced New Media"
         }
       ]
     },
@@ -16787,6 +16727,48 @@
           "end": "19:15",
           "course": "STA 7935",
           "title": "Current Topics in Big Data Analytics"
+        }
+      ]
+    },
+    "TCH-0103": {
+      "building": "TCH",
+      "room": "0103",
+      "slots": [
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "ENT 4014",
+          "title": "New Venture Implementation"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "ENT 4014",
+          "title": "New Venture Implementation"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "REE 4103",
+          "title": "Real Estate Appraisal and Valuation"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "EVR 3085",
+          "title": "Interdisciplinary Research Methods for Environmental Studies"
         }
       ]
     },
@@ -18290,6 +18272,69 @@
           "days": [
             "T"
           ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "TSL 6350",
+          "title": "Grammar for ESOL Teachers"
+        },
+        {
+          "days": [
+            "T"
+          ],
           "start": "09:00",
           "end": "10:15",
           "course": "ENC 4212",
@@ -19346,69 +19391,6 @@
           ],
           "start": "18:00",
           "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "TSL 6350",
-          "title": "Grammar for ESOL Teachers"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
           "course": "TSL 6643",
           "title": "Diachronic Analysis of Second Language Acquisition Processes"
         },
@@ -19684,6 +19666,15 @@
           "end": "16:20",
           "course": "ACG 7398",
           "title": "Seminar in Auditing Research"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "16:30",
+          "end": "19:20",
+          "course": "FIN 7816",
+          "title": "Investment Theory"
         },
         {
           "days": [
@@ -21009,6 +21000,96 @@
         },
         {
           "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "DIG 6812",
+          "title": "Digital Interaction for Informal Learning"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "18:00",
@@ -21264,6 +21345,78 @@
         },
         {
           "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "17:20",
+          "course": "DIG 3480",
+          "title": "Computer as a Medium"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "10:30",
@@ -21395,6 +21548,38 @@
           "end": "11:45",
           "course": "THE 6507",
           "title": "Dramatic Theory and Criticism"
+        }
+      ]
+    },
+    "DPAC-0202": {
+      "building": "DPAC",
+      "room": "0202",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "11:30",
+          "end": "12:45",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        }
+      ]
+    },
+    "DPAC-0201": {
+      "building": "DPAC",
+      "room": "0201",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:00",
+          "end": "11:15",
+          "course": "ENC 1102",
+          "title": "Composition II"
         }
       ]
     },
@@ -21698,22 +21883,6 @@
         }
       ]
     },
-    "VAB-0104": {
-      "building": "VAB",
-      "room": "0104",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "11:00",
-          "end": "13:50",
-          "course": "GRA 3835",
-          "title": "Advanced New Media"
-        }
-      ]
-    },
     "BBS-0103": {
       "building": "BBS",
       "room": "0103",
@@ -21774,6 +21943,22 @@
           "end": "11:50",
           "course": "MAN 3302",
           "title": "Talent Management"
+        }
+      ]
+    },
+    "DPAC-0252": {
+      "building": "DPAC",
+      "room": "0252",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "11:30",
+          "end": "12:45",
+          "course": "MGF 1131",
+          "title": "Mathematics in Context"
         }
       ]
     },
@@ -23469,9 +23654,9 @@
         }
       ]
     },
-    "RSH-0126": {
+    "RSH-0116": {
       "building": "RSH",
-      "room": "0126",
+      "room": "0116",
       "slots": [
         {
           "days": [
@@ -23481,15 +23666,6 @@
           "end": "15:45",
           "course": "HFT 3868C",
           "title": "History and Culture of Wine"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "16:30",
-          "end": "17:45",
-          "course": "HFT 4065C",
-          "title": "Fine Spirits Management"
         },
         {
           "days": [
@@ -23550,6 +23726,21 @@
           "end": "12:50",
           "course": "HFT 4949",
           "title": "Cooperative Education"
+        }
+      ]
+    },
+    "RSH-0126": {
+      "building": "RSH",
+      "room": "0126",
+      "slots": [
+        {
+          "days": [
+            "W"
+          ],
+          "start": "16:30",
+          "end": "17:45",
+          "course": "HFT 4065C",
+          "title": "Fine Spirits Management"
         }
       ]
     },
@@ -23916,15 +24107,6 @@
         },
         {
           "days": [
-            "M"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "OSE 4520L",
-          "title": "Laser Engineering Laboratory"
-        },
-        {
-          "days": [
             "R"
           ],
           "start": "12:00",
@@ -23964,6 +24146,15 @@
           "end": "17:50",
           "course": "OSE 4470L",
           "title": "Fiber-Optic Communications Laboratory"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "OSE 4520L",
+          "title": "Laser Engineering Laboratory"
         }
       ]
     },
@@ -24136,15 +24327,6 @@
         {
           "days": [
             "T"
-          ],
-          "start": "11:30",
-          "end": "14:20",
-          "course": "PCB 3233L",
-          "title": "Immunology Laboratory"
-        },
-        {
-          "days": [
-            "R"
           ],
           "start": "11:30",
           "end": "14:20",
@@ -24563,30 +24745,6 @@
           "end": "13:50",
           "course": "TPA 2248C",
           "title": "Makeup Techniques"
-        }
-      ]
-    },
-    "CB1-O313": {
-      "building": "CB1",
-      "room": "O313",
-      "slots": [
-        {
-          "days": [
-            "T"
-          ],
-          "start": "07:30",
-          "end": "10:20",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "19:30",
-          "end": "22:20",
-          "course": "ZOO 3733C",
-          "title": "Human Anatomy"
         }
       ]
     }
