@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-09-07T16:49:03.262859",
+  "scraped_at": "2026-09-14T17:37:26.068617",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -534,31 +534,6 @@
           ],
           "start": "12:00",
           "end": "13:15",
-          "course": "AMH 2020",
-          "title": "U.S. History: 1877-Present"
-        }
-      ]
-    },
-    "UWCV-0302": {
-      "building": "UWCV",
-      "room": "0302",
-      "slots": [
-        {
-          "days": [
-            "T"
-          ],
-          "start": "16:00",
-          "end": "17:15",
-          "course": "AMH 2020",
-          "title": "U.S. History: 1877-Present"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "14:30",
-          "end": "15:45",
           "course": "AMH 2020",
           "title": "U.S. History: 1877-Present"
         }
@@ -1100,7 +1075,7 @@
         },
         {
           "days": [
-            "R"
+            "T"
           ],
           "start": "13:30",
           "end": "16:20",
@@ -1109,7 +1084,52 @@
         },
         {
           "days": [
-            "U"
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "MAE 3311",
+          "title": "Elementary Mathematics for Teaching II"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "MAE 3311",
+          "title": "Elementary Mathematics for Teaching II"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "MAE 3311",
+          "title": "Elementary Mathematics for Teaching II"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "MAE 3311",
+          "title": "Elementary Mathematics for Teaching II"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "MAE 3311",
+          "title": "Elementary Mathematics for Teaching II"
+        },
+        {
+          "days": [
+            "T"
           ],
           "start": "13:30",
           "end": "16:20",
@@ -2925,15 +2945,6 @@
         {
           "days": [
             "T"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "HSA 4109",
-          "title": "Health Insurance and Managed Care"
-        },
-        {
-          "days": [
-            "R"
           ],
           "start": "12:00",
           "end": "13:15",
@@ -6990,6 +7001,15 @@
           "end": "16:15",
           "course": "ENL 2022",
           "title": "English Literature II"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSA 4109",
+          "title": "Health Insurance and Managed Care"
         },
         {
           "days": [
@@ -13370,15 +13390,6 @@
         },
         {
           "days": [
-            "W"
-          ],
-          "start": "17:30",
-          "end": "19:20",
-          "course": "PHY 2054L",
-          "title": "College Physics II Laboratory"
-        },
-        {
-          "days": [
             "R"
           ],
           "start": "15:30",
@@ -14471,114 +14482,6 @@
           "end": "16:20",
           "course": "ECO 2023",
           "title": "Principles of Microeconomics"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:20",
-          "course": "ACG 2071",
-          "title": "Principles of Managerial Accounting"
         },
         {
           "days": [
@@ -15789,31 +15692,6 @@
         }
       ]
     },
-    "CMB-O307": {
-      "building": "CMB",
-      "room": "O307",
-      "slots": [
-        {
-          "days": [
-            "F"
-          ],
-          "start": "08:30",
-          "end": "11:15",
-          "course": "ART 2203C",
-          "title": "Design Fundamentals-Three Dimensional"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "17:30",
-          "end": "20:15",
-          "course": "ART 2300C",
-          "title": "Drawing Fundamentals I"
-        }
-      ]
-    },
     "VAB-0210": {
       "building": "VAB",
       "room": "0210",
@@ -16626,22 +16504,6 @@
           "end": "16:20",
           "course": "PEM 2432",
           "title": "Intermediate Judo"
-        }
-      ]
-    },
-    "UWCV-0311": {
-      "building": "UWCV",
-      "room": "0311",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "10:00",
-          "end": "11:15",
-          "course": "ECO 2023",
-          "title": "Principles of Microeconomics"
         }
       ]
     },
@@ -18683,6 +18545,51 @@
         }
       ]
     },
+    "CON-0106A": {
+      "building": "CON",
+      "room": "0106A",
+      "slots": [
+        {
+          "days": [
+            "M"
+          ],
+          "start": "13:30",
+          "end": "15:20",
+          "course": "NUR 3065",
+          "title": "Health Assessment"
+        },
+        {
+          "days": [
+            "R",
+            "F"
+          ],
+          "start": "09:00",
+          "end": "10:50",
+          "course": "NUR 3445",
+          "title": "Nursing Care of Families"
+        },
+        {
+          "days": [
+            "T",
+            "W"
+          ],
+          "start": "15:00",
+          "end": "16:50",
+          "course": "NUR 4227",
+          "title": "Nursing Care of the Adult II"
+        },
+        {
+          "days": [
+            "T",
+            "W"
+          ],
+          "start": "17:00",
+          "end": "18:20",
+          "course": "NUR 4535",
+          "title": "Psychiatric Mental Health Nursing"
+        }
+      ]
+    },
     "D140-0206": {
       "building": "D140",
       "room": "0206",
@@ -18821,42 +18728,6 @@
           "end": "10:50",
           "course": "NUR 3165H",
           "title": "Honors Nursing Research"
-        }
-      ]
-    },
-    "CON-0106A": {
-      "building": "CON",
-      "room": "0106A",
-      "slots": [
-        {
-          "days": [
-            "R",
-            "F"
-          ],
-          "start": "09:00",
-          "end": "10:50",
-          "course": "NUR 3445",
-          "title": "Nursing Care of Families"
-        },
-        {
-          "days": [
-            "T",
-            "W"
-          ],
-          "start": "15:00",
-          "end": "16:50",
-          "course": "NUR 4227",
-          "title": "Nursing Care of the Adult II"
-        },
-        {
-          "days": [
-            "T",
-            "W"
-          ],
-          "start": "17:00",
-          "end": "18:20",
-          "course": "NUR 4535",
-          "title": "Psychiatric Mental Health Nursing"
         }
       ]
     },
@@ -20274,30 +20145,6 @@
         }
       ]
     },
-    "CHEM-0202": {
-      "building": "CHEM",
-      "room": "0202",
-      "slots": [
-        {
-          "days": [
-            "R"
-          ],
-          "start": "16:30",
-          "end": "19:20",
-          "course": "CHM 2211L",
-          "title": "Organic Laboratory Techniques I"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "CHS 3530L",
-          "title": "Forensic Analysis of Controlled Substances Lab"
-        }
-      ]
-    },
     "CHEM-0209": {
       "building": "CHEM",
       "room": "0209",
@@ -21551,38 +21398,6 @@
         }
       ]
     },
-    "DPAC-0202": {
-      "building": "DPAC",
-      "room": "0202",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "11:30",
-          "end": "12:45",
-          "course": "ENC 1102",
-          "title": "Composition II"
-        }
-      ]
-    },
-    "DPAC-0201": {
-      "building": "DPAC",
-      "room": "0201",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "10:00",
-          "end": "11:15",
-          "course": "ENC 1102",
-          "title": "Composition II"
-        }
-      ]
-    },
     "NSC-O103": {
       "building": "NSC",
       "room": "O103",
@@ -21943,22 +21758,6 @@
           "end": "11:50",
           "course": "MAN 3302",
           "title": "Talent Management"
-        }
-      ]
-    },
-    "DPAC-0252": {
-      "building": "DPAC",
-      "room": "0252",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "11:30",
-          "end": "12:45",
-          "course": "MGF 1131",
-          "title": "Mathematics in Context"
         }
       ]
     },
@@ -22859,15 +22658,6 @@
         },
         {
           "days": [
-            "M"
-          ],
-          "start": "12:30",
-          "end": "14:20",
-          "course": "PCB 4683L",
-          "title": "Evolutionary Biology Lab"
-        },
-        {
-          "days": [
             "W",
             "F"
           ],
@@ -22900,6 +22690,21 @@
           "end": "17:20",
           "course": "BSC 3403C",
           "title": "Quantitative Biological Methods"
+        }
+      ]
+    },
+    "CHEM-0202": {
+      "building": "CHEM",
+      "room": "0202",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "CHS 3530L",
+          "title": "Forensic Analysis of Controlled Substances Lab"
         }
       ]
     },
@@ -24642,9 +24447,9 @@
         }
       ]
     },
-    "DPAC-0277": {
+    "DPAC-0151": {
       "building": "DPAC",
-      "room": "0277",
+      "room": "0151",
       "slots": [
         {
           "days": [
