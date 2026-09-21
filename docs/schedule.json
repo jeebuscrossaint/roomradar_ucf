@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-09-14T17:37:26.068617",
+  "scraped_at": "2026-09-21T17:44:39.248062",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -465,6 +465,17 @@
           "end": "09:20",
           "course": "PCB 3522",
           "title": "Molecular Biology I"
+        },
+        {
+          "days": [
+            "M",
+            "W",
+            "F"
+          ],
+          "start": "08:30",
+          "end": "09:20",
+          "course": "PCB 3522",
+          "title": "Molecular Biology I"
         }
       ]
     },
@@ -534,6 +545,31 @@
           ],
           "start": "12:00",
           "end": "13:15",
+          "course": "AMH 2020",
+          "title": "U.S. History: 1877-Present"
+        }
+      ]
+    },
+    "UWCV-0302": {
+      "building": "UWCV",
+      "room": "0302",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "16:00",
+          "end": "17:15",
+          "course": "AMH 2020",
+          "title": "U.S. History: 1877-Present"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "14:30",
+          "end": "15:45",
           "course": "AMH 2020",
           "title": "U.S. History: 1877-Present"
         }
@@ -1182,6 +1218,15 @@
           "days": [
             "R"
           ],
+          "start": "12:00",
+          "end": "14:50",
+          "course": "GEB 3031",
+          "title": "Integrated Business Foundations"
+        },
+        {
+          "days": [
+            "R"
+          ],
           "start": "15:00",
           "end": "17:50",
           "course": "MAN 4143",
@@ -1495,6 +1540,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "EMA 3706",
+          "title": "Structure and Properties of Aerospace Materials"
+        },
+        {
+          "days": [
             "F"
           ],
           "start": "16:30",
@@ -1612,6 +1667,15 @@
           "end": "13:15",
           "course": "HSC 4501",
           "title": "Epidemiology of Chronic Diseases"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "COM 3311",
+          "title": "Communication Research Methods"
         },
         {
           "days": [
@@ -1760,6 +1824,16 @@
           "end": "15:50",
           "course": "MSL 4301C",
           "title": "Leadership and Management"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "PCB 4234",
+          "title": "Cancer Biology"
         },
         {
           "days": [
@@ -2288,6 +2362,16 @@
             "M",
             "W"
           ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "HSC 4930",
+          "title": "Health Sciences Seminar"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
           "start": "13:30",
           "end": "14:45",
           "course": "HSC 4930",
@@ -2653,6 +2737,16 @@
           "end": "11:45",
           "course": "COP 3402",
           "title": "Systems Software"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "PCB 3044",
+          "title": "Principles of Ecology"
         },
         {
           "days": [
@@ -3116,6 +3210,16 @@
           "end": "16:15",
           "course": "EAS 6405",
           "title": "Advanced Flight Dynamics"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "CAP 6671",
+          "title": "Intelligent Systems: Robots, Agents, and Humans"
         },
         {
           "days": [
@@ -3682,6 +3786,37 @@
           "end": "13:20",
           "course": "PCB 3233",
           "title": "Immunology"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "PCB 3044",
+          "title": "Principles of Ecology"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "13:30",
+          "end": "14:50",
+          "course": "PCB 3233",
+          "title": "Immunology"
+        },
+        {
+          "days": [
+            "M",
+            "W",
+            "F"
+          ],
+          "start": "12:30",
+          "end": "13:20",
+          "course": "PCB 3233",
+          "title": "Immunology"
         }
       ]
     },
@@ -3704,6 +3839,24 @@
           ],
           "start": "17:30",
           "end": "18:20",
+          "course": "COP 3223C",
+          "title": "Introduction to Programming with C"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "13:30",
+          "end": "14:20",
+          "course": "COP 3223C",
+          "title": "Introduction to Programming with C"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:30",
+          "end": "16:20",
           "course": "COP 3223C",
           "title": "Introduction to Programming with C"
         },
@@ -4091,6 +4244,16 @@
             "T",
             "R"
           ],
+          "start": "12:00",
+          "end": "13:20",
+          "course": "PCB 4524",
+          "title": "Molecular Biology II"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
           "start": "16:30",
           "end": "17:45",
           "course": "STA 2023",
@@ -4333,6 +4496,16 @@
           "end": "14:45",
           "course": "MAP 4640",
           "title": "Financial Mathematics"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "PCB 4529C",
+          "title": "Experimental Molecular Cell Biology"
         },
         {
           "days": [
@@ -4848,6 +5021,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "IDH 3600H",
+          "title": "Honors Case Studies in Ethics"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -5084,6 +5267,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "ECO 3155",
+          "title": "Thinking Like an Economist"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "18:00",
@@ -5157,6 +5350,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "CPO 3103",
+          "title": "Comparative Politics"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -5226,6 +5429,15 @@
           "end": "17:50",
           "course": "EEL 3801C",
           "title": "Computer Organization"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "11:00",
+          "end": "12:50",
+          "course": "EEL 4742C",
+          "title": "Embedded Systems"
         },
         {
           "days": [
@@ -5342,6 +5554,15 @@
           "end": "18:50",
           "course": "CGN 4808C",
           "title": "CECE Capstone Design"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "09:30",
+          "end": "11:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
         },
         {
           "days": [
@@ -5560,6 +5781,15 @@
           "end": "17:45",
           "course": "EEL 4932",
           "title": "Special Topics"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "VIC 4312",
+          "title": "Power Branding"
         },
         {
           "days": [
@@ -5849,6 +6079,60 @@
           "end": "10:15",
           "course": "EIN 4360",
           "title": "Facilities Planning and Work Design"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2054",
+          "title": "College Physics II"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2054",
+          "title": "College Physics II"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2054",
+          "title": "College Physics II"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2054",
+          "title": "College Physics II"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2054",
+          "title": "College Physics II"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2054",
+          "title": "College Physics II"
         },
         {
           "days": [
@@ -6316,6 +6600,15 @@
         },
         {
           "days": [
+            "F"
+          ],
+          "start": "09:00",
+          "end": "11:45",
+          "course": "EGN 3310",
+          "title": "Engineering Analysis-Statics"
+        },
+        {
+          "days": [
             "M"
           ],
           "start": "10:30",
@@ -6452,6 +6745,15 @@
       "slots": [
         {
           "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "EML 3034C",
+          "title": "Modeling Methods in Mechanical and Aerospace Engineering"
+        },
+        {
+          "days": [
             "F"
           ],
           "start": "12:00",
@@ -6563,6 +6865,16 @@
             "T",
             "R"
           ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "CHM 2045C",
+          "title": "Chemistry Fundamentals I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
           "start": "09:00",
           "end": "10:15",
           "course": "CHM 2046",
@@ -6606,6 +6918,16 @@
           "end": "08:45",
           "course": "BSC 2011C",
           "title": "Biology II"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "17:00",
+          "end": "18:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
         },
         {
           "days": [
@@ -6948,6 +7270,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "SPC 1608H",
+          "title": "Honors Fundamentals of Oral Communication"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -7146,6 +7478,15 @@
         },
         {
           "days": [
+            "T"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "FSS 2221C",
+          "title": "Techniques of Food Preparation"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "10:30",
@@ -7192,6 +7533,15 @@
           ],
           "start": "11:20",
           "end": "14:10",
+          "course": "FSS 2221C",
+          "title": "Techniques of Food Preparation"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "14:40",
+          "end": "17:30",
           "course": "FSS 2221C",
           "title": "Techniques of Food Preparation"
         },
@@ -8015,6 +8365,24 @@
         },
         {
           "days": [
+            "M"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "COM 4110",
+          "title": "Business and Professional Communication"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "COM 4120",
+          "title": "Organizational Communication"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "10:30",
@@ -8054,6 +8422,15 @@
           "end": "13:15",
           "course": "HSA 3104",
           "title": "Health Services Administration Cornerstone"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:30",
+          "end": "10:20",
+          "course": "PHY 2048",
+          "title": "General Physics Using Calculus I"
         },
         {
           "days": [
@@ -8109,6 +8486,15 @@
           "end": "17:50",
           "course": "PHZ 6439",
           "title": "Interfacial Physics"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "15:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
         },
         {
           "days": [
@@ -8383,6 +8769,15 @@
         },
         {
           "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "SPC 4513C",
+          "title": "Argumentation and Debate"
+        },
+        {
+          "days": [
             "M"
           ],
           "start": "12:00",
@@ -8633,6 +9028,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "LIT 3393",
+          "title": "Literature and Culture of Trauma"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "18:00",
@@ -8737,6 +9142,15 @@
           "end": "13:20",
           "course": "PHY 2049C",
           "title": "Honors General Physics Using Calculus II"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "COM 4110",
+          "title": "Business and Professional Communication"
         },
         {
           "days": [
@@ -9197,6 +9611,15 @@
         },
         {
           "days": [
+            "M"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "12:00",
@@ -9222,6 +9645,107 @@
           "end": "17:15",
           "course": "MAC 2311C",
           "title": "Honors Calculus with Analytic Geometry I"
+        }
+      ]
+    },
+    "MSB-0108": {
+      "building": "MSB",
+      "room": "0108",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "MAD 4472",
+          "title": "Introduction to Cryptography"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "PHY 5606",
+          "title": "Quantum Mechanics I"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "09:30",
+          "end": "10:20",
+          "course": "PHY 2049C",
+          "title": "Honors General Physics Using Calculus II"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "15:00",
+          "end": "17:50",
+          "course": "MAN 4323",
+          "title": "Human Resource Management Competencies"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "12:00",
+          "end": "12:50",
+          "course": "MAT 2200",
+          "title": "Mapping Your Mathematical Future"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "ANT 3330",
+          "title": "Anthropology of the Amazon"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "HFT 2254",
+          "title": "Lodging Operations"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "18:00",
+          "end": "19:15",
+          "course": "MAP 4153",
+          "title": "Vector and Tensor Analysis"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "MAP 4303",
+          "title": "Ordinary Differential Equations II"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "19:30",
+          "end": "20:50",
+          "course": "STA 7719",
+          "title": "Survival Analysis"
         }
       ]
     },
@@ -9344,6 +9868,15 @@
           ],
           "start": "07:30",
           "end": "08:20",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:30",
+          "end": "14:20",
           "course": "PHY 2053",
           "title": "College Physics I"
         },
@@ -9977,6 +10510,15 @@
           "end": "12:45",
           "course": "PCB 4805",
           "title": "Endocrinology"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "11:30",
+          "end": "12:45",
+          "course": "PCB 4805",
+          "title": "Endocrinology"
         }
       ]
     },
@@ -10429,6 +10971,15 @@
           "end": "12:45",
           "course": "MHS 7808",
           "title": "Internship in Counseling Supervision"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "11:50",
+          "course": "CJE 6706",
+          "title": "Seminar in Police Socialization and Culture"
         },
         {
           "days": [
@@ -11638,6 +12189,15 @@
         },
         {
           "days": [
+            "W"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "PLA 4244",
+          "title": "Community Mediation and Conflict Resolution"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "15:00",
@@ -12079,6 +12639,26 @@
           "end": "13:15",
           "course": "EGN 3321H",
           "title": "Honors Engineering Analysis-Dynamics"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "THE 2000H",
+          "title": "Honors Theatre Survey"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "16:30",
+          "end": "17:45",
+          "course": "THE 2000H",
+          "title": "Honors Theatre Survey"
         }
       ]
     },
@@ -12439,6 +13019,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "16:30",
+          "end": "17:45",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        },
+        {
+          "days": [
             "M",
             "W"
           ],
@@ -12483,97 +13073,6 @@
           "end": "10:50",
           "course": "EGS 4950",
           "title": "Engineering Leadership Capstone"
-        }
-      ]
-    },
-    "MSB-0108": {
-      "building": "MSB",
-      "room": "0108",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "10:30",
-          "end": "11:45",
-          "course": "PHY 5606",
-          "title": "Quantum Mechanics I"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "09:30",
-          "end": "10:20",
-          "course": "PHY 2049C",
-          "title": "Honors General Physics Using Calculus II"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "15:00",
-          "end": "17:50",
-          "course": "MAN 4323",
-          "title": "Human Resource Management Competencies"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "12:00",
-          "end": "12:50",
-          "course": "MAT 2200",
-          "title": "Mapping Your Mathematical Future"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "13:30",
-          "end": "14:45",
-          "course": "ANT 3330",
-          "title": "Anthropology of the Amazon"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "15:00",
-          "end": "16:15",
-          "course": "HFT 2254",
-          "title": "Lodging Operations"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "18:00",
-          "end": "19:15",
-          "course": "MAP 4153",
-          "title": "Vector and Tensor Analysis"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "09:00",
-          "end": "10:15",
-          "course": "MAP 4303",
-          "title": "Ordinary Differential Equations II"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "19:30",
-          "end": "20:50",
-          "course": "STA 7719",
-          "title": "Survival Analysis"
         }
       ]
     },
@@ -12653,6 +13152,16 @@
           "end": "11:45",
           "course": "ASH 4443",
           "title": "The Japanese Empire"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "CHM 2045C",
+          "title": "Honors Chemistry Fundamentals I"
         },
         {
           "days": [
@@ -12815,6 +13324,60 @@
         },
         {
           "days": [
+            "M"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2053",
+          "title": "College Physics I"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "15:00",
@@ -12944,6 +13507,43 @@
           "end": "14:45",
           "course": "COP 4331C",
           "title": "Processes for Object-Oriented Software Development"
+        }
+      ]
+    },
+    "MSB-0350": {
+      "building": "MSB",
+      "room": "0350",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PHY 2048C",
+          "title": "General Physics Using Calculus I Studio"
+        },
+        {
+          "days": [
+            "M",
+            "W",
+            "F"
+          ],
+          "start": "11:30",
+          "end": "13:20",
+          "course": "PHY 2054C",
+          "title": "College Physics II Studio"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PHY 2054C",
+          "title": "College Physics II Studio"
         }
       ]
     },
@@ -13094,6 +13694,15 @@
           "end": "17:20",
           "course": "PHY 2048C",
           "title": "Honors General Physics Using Calculus I"
+        },
+        {
+          "days": [
+            "S"
+          ],
+          "start": "09:30",
+          "end": "11:20",
+          "course": "PHY 2048L",
+          "title": "General Physics Using Calculus I Laboratory"
         }
       ]
     },
@@ -13339,33 +13948,6 @@
         }
       ]
     },
-    "MSB-0350": {
-      "building": "MSB",
-      "room": "0350",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W",
-            "F"
-          ],
-          "start": "11:30",
-          "end": "13:20",
-          "course": "PHY 2054C",
-          "title": "College Physics II Studio"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "11:00",
-          "end": "13:50",
-          "course": "PHY 2054C",
-          "title": "College Physics II Studio"
-        }
-      ]
-    },
     "MSB-0338": {
       "building": "MSB",
       "room": "0338",
@@ -13376,6 +13958,15 @@
           ],
           "start": "07:30",
           "end": "09:20",
+          "course": "PHY 2054L",
+          "title": "College Physics II Laboratory"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "09:30",
+          "end": "11:20",
           "course": "PHY 2054L",
           "title": "College Physics II Laboratory"
         },
@@ -13765,6 +14356,16 @@
           "end": "16:15",
           "course": "HSC 4558",
           "title": "Pathophysiology II"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "HSC 4730",
+          "title": "Applied Health Research Methodology"
         },
         {
           "days": [
@@ -14485,6 +15086,114 @@
         },
         {
           "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:20",
+          "course": "ACG 2071",
+          "title": "Principles of Managerial Accounting"
+        },
+        {
+          "days": [
             "M"
           ],
           "start": "07:30",
@@ -14771,6 +15480,77 @@
           "end": "16:15",
           "course": "COP 4600",
           "title": "Operating Systems"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "ZOO 3713",
+          "title": "Comparative Vertebrate Anatomy"
+        }
+      ]
+    },
+    "NSC-O116": {
+      "building": "NSC",
+      "room": "O116",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "SPC 3602",
+          "title": "Advanced Public Communication"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "FIN 3461",
+          "title": "Financial Statement Analysis"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "16:30",
+          "end": "18:20",
+          "course": "ISC 4323C",
+          "title": "Praxis for Data Science"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "10:30",
+          "end": "13:20",
+          "course": "SPA 6327",
+          "title": "Aural Habilitation Rehab"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "SPN 4410",
+          "title": "Advanced Spanish Conversation"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "07:30",
+          "end": "09:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
         }
       ]
     },
@@ -14989,6 +15769,16 @@
           "end": "11:20",
           "course": "TPP 4923C",
           "title": "MT Applied/Studio Voice VI"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "09:30",
+          "end": "10:45",
+          "course": "THE 3053",
+          "title": "Theatre for Young Audiences and Communities"
         }
       ]
     },
@@ -15692,6 +16482,41 @@
         }
       ]
     },
+    "CMB-O307": {
+      "building": "CMB",
+      "room": "O307",
+      "slots": [
+        {
+          "days": [
+            "F"
+          ],
+          "start": "08:30",
+          "end": "11:15",
+          "course": "ART 2203C",
+          "title": "Design Fundamentals-Three Dimensional"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "08:30",
+          "end": "11:15",
+          "course": "ART 2300C",
+          "title": "Drawing Fundamentals I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "17:30",
+          "end": "20:15",
+          "course": "ART 2300C",
+          "title": "Drawing Fundamentals I"
+        }
+      ]
+    },
     "VAB-0210": {
       "building": "VAB",
       "room": "0210",
@@ -15903,6 +16728,15 @@
           "end": "19:20",
           "course": "ART 3643C",
           "title": "Digital Effects & Compositing"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "13:00",
+          "end": "15:50",
+          "course": "FIL 4735C",
+          "title": "Advanced Animation Thesis Production"
         },
         {
           "days": [
@@ -16135,6 +16969,15 @@
           "end": "16:15",
           "course": "GEO 2370",
           "title": "Resources Geography"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "08:30",
+          "end": "09:45",
+          "course": "PCB 4280",
+          "title": "Molecular Immunology"
         },
         {
           "days": [
@@ -16504,6 +17347,22 @@
           "end": "16:20",
           "course": "PEM 2432",
           "title": "Intermediate Judo"
+        }
+      ]
+    },
+    "UWCV-0311": {
+      "building": "UWCV",
+      "room": "0311",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "10:00",
+          "end": "11:15",
+          "course": "ECO 2023",
+          "title": "Principles of Microeconomics"
         }
       ]
     },
@@ -17152,6 +18011,15 @@
           "end": "20:50",
           "course": "FIL 3871",
           "title": "The American Film Artist"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "FIL 4830",
+          "title": "Motion Picture Genre"
         },
         {
           "days": [
@@ -17981,10 +18849,38 @@
             "M",
             "W"
           ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "HSC 4555",
+          "title": "Pathophysiology I"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "18:00",
+          "end": "19:15",
+          "course": "HSC 4930",
+          "title": "Health Sciences Seminar"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
           "start": "09:00",
           "end": "10:15",
           "course": "INR 4363",
           "title": "Intelligence Analysis and Reporting"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "INR 4401",
+          "title": "International Law"
         },
         {
           "days": [
@@ -18042,6 +18938,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        },
+        {
+          "days": [
             "W"
           ],
           "start": "18:00",
@@ -18076,6 +18982,15 @@
         },
         {
           "days": [
+            "R"
+          ],
+          "start": "11:00",
+          "end": "13:20",
+          "course": "SCE 4932",
+          "title": "Special Topics"
+        },
+        {
+          "days": [
             "T",
             "R"
           ],
@@ -18083,6 +18998,26 @@
           "end": "14:45",
           "course": "MCB 4720",
           "title": "Industrial Perspectives Seminar"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "16:30",
+          "end": "17:50",
+          "course": "PCB 4353",
+          "title": "Florida Ecology, Natural History and Conservation"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "09:00",
+          "end": "10:50",
+          "course": "PCB 4723",
+          "title": "Animal Physiology"
         },
         {
           "days": [
@@ -18898,6 +19833,15 @@
         },
         {
           "days": [
+            "T"
+          ],
+          "start": "09:30",
+          "end": "10:20",
+          "course": "PSY 3204C",
+          "title": "Statistical Methods in Psychology"
+        },
+        {
+          "days": [
             "R"
           ],
           "start": "11:30",
@@ -18960,6 +19904,15 @@
         {
           "days": [
             "R"
+          ],
+          "start": "10:30",
+          "end": "11:20",
+          "course": "PSY 3204C",
+          "title": "Statistical Methods in Psychology"
+        },
+        {
+          "days": [
+            "T"
           ],
           "start": "10:30",
           "end": "11:20",
@@ -20079,6 +21032,30 @@
         }
       ]
     },
+    "CHEM-0109": {
+      "building": "CHEM",
+      "room": "0109",
+      "slots": [
+        {
+          "days": [
+            "F"
+          ],
+          "start": "10:30",
+          "end": "13:20",
+          "course": "CHM 2046L",
+          "title": "Chemistry Fundamentals Laboratory"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "16:30",
+          "end": "19:20",
+          "course": "CHM 2046L",
+          "title": "Chemistry Fundamentals Laboratory"
+        }
+      ]
+    },
     "CHEM-0108": {
       "building": "CHEM",
       "room": "0108",
@@ -20087,10 +21064,43 @@
           "days": [
             "F"
           ],
+          "start": "07:30",
+          "end": "10:20",
+          "course": "CHM 2046L",
+          "title": "Chemistry Fundamentals Laboratory"
+        },
+        {
+          "days": [
+            "F"
+          ],
           "start": "13:30",
           "end": "16:20",
           "course": "CHM 2046L",
           "title": "Chemistry Fundamentals Laboratory"
+        }
+      ]
+    },
+    "CHEM-0202": {
+      "building": "CHEM",
+      "room": "0202",
+      "slots": [
+        {
+          "days": [
+            "W"
+          ],
+          "start": "07:30",
+          "end": "10:20",
+          "course": "CHM 2211L",
+          "title": "Organic Laboratory Techniques I"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "13:30",
+          "end": "16:20",
+          "course": "CHS 3530L",
+          "title": "Forensic Analysis of Controlled Substances Lab"
         }
       ]
     },
@@ -21029,8 +22039,26 @@
           "days": [
             "M"
           ],
+          "start": "13:30",
+          "end": "15:20",
+          "course": "DIG 4104C",
+          "title": "Web and Interactive Media Capstone I"
+        },
+        {
+          "days": [
+            "M"
+          ],
           "start": "15:30",
           "end": "17:20",
+          "course": "DIG 4104C",
+          "title": "Web and Interactive Media Capstone I"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "13:30",
+          "end": "15:20",
           "course": "DIG 4104C",
           "title": "Web and Interactive Media Capstone I"
         },
@@ -21398,6 +22426,38 @@
         }
       ]
     },
+    "DPAC-0202": {
+      "building": "DPAC",
+      "room": "0202",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "11:30",
+          "end": "12:45",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        }
+      ]
+    },
+    "DPAC-0201": {
+      "building": "DPAC",
+      "room": "0201",
+      "slots": [
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:00",
+          "end": "11:15",
+          "course": "ENC 1102",
+          "title": "Composition II"
+        }
+      ]
+    },
     "NSC-O103": {
       "building": "NSC",
       "room": "O103",
@@ -21562,58 +22622,6 @@
         }
       ]
     },
-    "NSC-O116": {
-      "building": "NSC",
-      "room": "O116",
-      "slots": [
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "FIN 3461",
-          "title": "Financial Statement Analysis"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "16:30",
-          "end": "18:20",
-          "course": "ISC 4323C",
-          "title": "Praxis for Data Science"
-        },
-        {
-          "days": [
-            "R"
-          ],
-          "start": "10:30",
-          "end": "13:20",
-          "course": "SPA 6327",
-          "title": "Aural Habilitation Rehab"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "10:30",
-          "end": "11:45",
-          "course": "SPN 4410",
-          "title": "Advanced Spanish Conversation"
-        },
-        {
-          "days": [
-            "F"
-          ],
-          "start": "07:30",
-          "end": "09:15",
-          "course": "MAC 2311C",
-          "title": "Calculus with Analytic Geometry I"
-        }
-      ]
-    },
     "BA2-0201": {
       "building": "BA2",
       "room": "0201",
@@ -21624,6 +22632,24 @@
           ],
           "start": "09:00",
           "end": "11:50",
+          "course": "GEB 3031",
+          "title": "Integrated Business Foundations"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "15:00",
+          "end": "17:50",
+          "course": "GEB 3031",
+          "title": "Integrated Business Foundations"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "12:00",
+          "end": "14:50",
           "course": "GEB 3031",
           "title": "Integrated Business Foundations"
         },
@@ -21698,6 +22724,57 @@
         }
       ]
     },
+    "BA1-O130": {
+      "building": "BA1",
+      "room": "O130",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "12:00",
+          "end": "14:50",
+          "course": "GEB 4451",
+          "title": "Business Climate Analysis"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "12:00",
+          "end": "14:50",
+          "course": "GEB 4451",
+          "title": "Business Climate Analysis"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "09:00",
+          "end": "11:50",
+          "course": "MAN 3302",
+          "title": "Talent Management"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "09:00",
+          "end": "11:50",
+          "course": "MAN 4583",
+          "title": "Project Management"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "MAN 4737",
+          "title": "Integrated Management"
+        }
+      ]
+    },
     "BBS-0103": {
       "building": "BBS",
       "room": "0103",
@@ -21746,18 +22823,19 @@
         }
       ]
     },
-    "BA1-O130": {
-      "building": "BA1",
-      "room": "O130",
+    "DPAC-0252": {
+      "building": "DPAC",
+      "room": "0252",
       "slots": [
         {
           "days": [
-            "F"
+            "T",
+            "R"
           ],
-          "start": "09:00",
-          "end": "11:50",
-          "course": "MAN 3302",
-          "title": "Talent Management"
+          "start": "11:30",
+          "end": "12:45",
+          "course": "MGF 1131",
+          "title": "Mathematics in Context"
         }
       ]
     },
@@ -22585,6 +23663,46 @@
         },
         {
           "days": [
+            "M",
+            "W"
+          ],
+          "start": "17:00",
+          "end": "18:15",
+          "course": "MAC 2311C",
+          "title": "Calculus with Analytic Geometry I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PCB 3063",
+          "title": "Genetics"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "PCB 3063",
+          "title": "Genetics"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "13:30",
+          "end": "15:15",
+          "course": "PCB 4683",
+          "title": "Evolutionary Biology"
+        },
+        {
+          "days": [
             "T",
             "R"
           ],
@@ -22693,21 +23811,6 @@
         }
       ]
     },
-    "CHEM-0202": {
-      "building": "CHEM",
-      "room": "0202",
-      "slots": [
-        {
-          "days": [
-            "T"
-          ],
-          "start": "13:30",
-          "end": "16:20",
-          "course": "CHS 3530L",
-          "title": "Forensic Analysis of Controlled Substances Lab"
-        }
-      ]
-    },
     "CHEM-0305": {
       "building": "CHEM",
       "room": "0305",
@@ -22790,6 +23893,15 @@
           ],
           "start": "11:30",
           "end": "12:20",
+          "course": "COP 3223C",
+          "title": "Introduction to Programming with C"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "12:30",
+          "end": "13:20",
           "course": "COP 3223C",
           "title": "Introduction to Programming with C"
         },
@@ -24038,6 +25150,60 @@
           "end": "10:50",
           "course": "PCB 3044L",
           "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
         }
       ]
     },
@@ -24045,6 +25211,24 @@
       "building": "BIO",
       "room": "O105",
       "slots": [
+        {
+          "days": [
+            "W"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PCB 3044L",
+          "title": "Principles of Ecology Laboratory"
+        },
         {
           "days": [
             "W"
@@ -24078,6 +25262,69 @@
       "building": "BIO",
       "room": "O304",
       "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
+        {
+          "days": [
+            "R"
+          ],
+          "start": "14:00",
+          "end": "16:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "11:00",
+          "end": "13:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "14:00",
+          "end": "16:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "08:00",
+          "end": "10:50",
+          "course": "PCB 3063L",
+          "title": "Genetics Laboratory"
+        },
         {
           "days": [
             "W"
@@ -24137,6 +25384,15 @@
           "end": "14:20",
           "course": "PCB 3233L",
           "title": "Immunology Laboratory"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "11:30",
+          "end": "14:20",
+          "course": "PCB 3233L",
+          "title": "Immunology Laboratory"
         }
       ]
     },
@@ -24144,6 +25400,15 @@
       "building": "BSFS",
       "room": "0102",
       "slots": [
+        {
+          "days": [
+            "W"
+          ],
+          "start": "08:00",
+          "end": "12:50",
+          "course": "PCB 4353L",
+          "title": "Florida Ecology Lab"
+        },
         {
           "days": [
             "W"
@@ -24550,6 +25815,39 @@
           "end": "13:50",
           "course": "TPA 2248C",
           "title": "Makeup Techniques"
+        }
+      ]
+    },
+    "CB1-O313": {
+      "building": "CB1",
+      "room": "O313",
+      "slots": [
+        {
+          "days": [
+            "T"
+          ],
+          "start": "16:30",
+          "end": "19:20",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "17:30",
+          "end": "20:20",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
+        },
+        {
+          "days": [
+            "F"
+          ],
+          "start": "17:30",
+          "end": "20:20",
+          "course": "ZOO 3733C",
+          "title": "Human Anatomy"
         }
       ]
     }
