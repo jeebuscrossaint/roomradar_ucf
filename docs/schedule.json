@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-10-12T20:13:39.561603",
+  "scraped_at": "2026-10-19T18:10:14.254071",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -3943,6 +3943,111 @@
           "end": "14:45",
           "course": "COP 3503C",
           "title": "Computer Science II"
+        }
+      ]
+    },
+    "MSB-0260": {
+      "building": "MSB",
+      "room": "0260",
+      "slots": [
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "CGS 3763",
+          "title": "Operating System Concepts"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "09:30",
+          "end": "10:15",
+          "course": "PHY 2048",
+          "title": "General Physics Using Calculus I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "PHY 2048",
+          "title": "General Physics Using Calculus I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "12:00",
+          "end": "13:15",
+          "course": "PHY 2048",
+          "title": "General Physics Using Calculus I"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "07:30",
+          "end": "08:45",
+          "course": "PHY 2049",
+          "title": "General Physics Using Calculus II"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "07:30",
+          "end": "08:50",
+          "course": "PHY 2049",
+          "title": "General Physics Using Calculus II"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "15:00",
+          "end": "16:15",
+          "course": "EGN 3373",
+          "title": "Principles of Electrical Engineering"
+        },
+        {
+          "days": [
+            "T"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "CHS 3501",
+          "title": "Introduction to Forensic Science"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "16:30",
+          "end": "17:45",
+          "course": "COP 3223C",
+          "title": "Introduction to Programming with C"
+        },
+        {
+          "days": [
+            "M",
+            "W"
+          ],
+          "start": "18:00",
+          "end": "19:20",
+          "course": "COP 3502C",
+          "title": "Computer Science I"
         }
       ]
     },
@@ -12923,101 +13028,6 @@
           "end": "15:15",
           "course": "MAC 2312H",
           "title": "Honors Calculus with Analytic Geometry II"
-        }
-      ]
-    },
-    "MSB-0260": {
-      "building": "MSB",
-      "room": "0260",
-      "slots": [
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "09:30",
-          "end": "10:15",
-          "course": "PHY 2048",
-          "title": "General Physics Using Calculus I"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "15:00",
-          "end": "16:15",
-          "course": "PHY 2048",
-          "title": "General Physics Using Calculus I"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "12:00",
-          "end": "13:15",
-          "course": "PHY 2048",
-          "title": "General Physics Using Calculus I"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "07:30",
-          "end": "08:45",
-          "course": "PHY 2049",
-          "title": "General Physics Using Calculus II"
-        },
-        {
-          "days": [
-            "T",
-            "R"
-          ],
-          "start": "07:30",
-          "end": "08:50",
-          "course": "PHY 2049",
-          "title": "General Physics Using Calculus II"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "15:00",
-          "end": "16:15",
-          "course": "EGN 3373",
-          "title": "Principles of Electrical Engineering"
-        },
-        {
-          "days": [
-            "T"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "CHS 3501",
-          "title": "Introduction to Forensic Science"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "16:30",
-          "end": "17:45",
-          "course": "COP 3223C",
-          "title": "Introduction to Programming with C"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "18:00",
-          "end": "19:20",
-          "course": "COP 3502C",
-          "title": "Computer Science I"
         }
       ]
     },
