@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-11-02T20:36:03.877257",
+  "scraped_at": "2026-11-09T21:03:06.594256",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -13603,6 +13603,15 @@
         },
         {
           "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "CLP 4314",
+          "title": "Health Psychology"
+        },
+        {
+          "days": [
             "M",
             "W",
             "F"
@@ -19983,6 +19992,15 @@
           "end": "13:20",
           "course": "ACG 3141",
           "title": "Intermediate Financial Accounting II"
+        },
+        {
+          "days": [
+            "M"
+          ],
+          "start": "17:00",
+          "end": "19:50",
+          "course": "CLP 3302",
+          "title": "Clinical Psychology"
         },
         {
           "days": [
