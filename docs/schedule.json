@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-11-09T21:03:06.594256",
+  "scraped_at": "2026-11-16T20:44:26.792206",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -3379,6 +3379,15 @@
           "end": "16:15",
           "course": "EEL 5825",
           "title": "Machine Learning and Pattern Recognition"
+        },
+        {
+          "days": [
+            "W"
+          ],
+          "start": "18:00",
+          "end": "20:50",
+          "course": "EIN 5108",
+          "title": "The Environment of Technical Organizations"
         },
         {
           "days": [
@@ -6833,6 +6842,16 @@
             "T",
             "R"
           ],
+          "start": "13:30",
+          "end": "14:45",
+          "course": "CHM 2045C",
+          "title": "Chemistry Fundamentals I"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
           "start": "09:00",
           "end": "10:15",
           "course": "CHM 2046",
@@ -10054,6 +10073,16 @@
           "end": "17:45",
           "course": "FIN 4424",
           "title": "Advanced Topics in Financial Management"
+        },
+        {
+          "days": [
+            "T",
+            "R"
+          ],
+          "start": "09:00",
+          "end": "10:15",
+          "course": "FIN 4504",
+          "title": "Equity and Capital Markets"
         },
         {
           "days": [
@@ -13591,15 +13620,6 @@
           "end": "11:50",
           "course": "AFR 4201C",
           "title": "National Security Affairs and Prep for Active Duty I"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "CLP 4314",
-          "title": "Health Psychology"
         },
         {
           "days": [
@@ -17177,6 +17197,16 @@
         },
         {
           "days": [
+            "T",
+            "R"
+          ],
+          "start": "10:30",
+          "end": "11:45",
+          "course": "FIN 3414",
+          "title": "Intermediate Corporate Finance"
+        },
+        {
+          "days": [
             "T"
           ],
           "start": "18:00",
@@ -17568,16 +17598,6 @@
           ],
           "start": "13:30",
           "end": "14:45",
-          "course": "CHM 2211",
-          "title": "Organic Chemistry II"
-        },
-        {
-          "days": [
-            "M",
-            "W"
-          ],
-          "start": "15:00",
-          "end": "16:15",
           "course": "CHM 2211",
           "title": "Organic Chemistry II"
         },
@@ -19130,6 +19150,15 @@
         },
         {
           "days": [
+            "T"
+          ],
+          "start": "11:30",
+          "end": "14:20",
+          "course": "NUR 3165",
+          "title": "Nursing Research"
+        },
+        {
+          "days": [
             "R",
             "F"
           ],
@@ -19313,6 +19342,26 @@
           "end": "12:50",
           "course": "NUR 3816",
           "title": "Professional Nurse Seminar"
+        },
+        {
+          "days": [
+            "T",
+            "W"
+          ],
+          "start": "07:30",
+          "end": "09:20",
+          "course": "NUR 4227",
+          "title": "Nursing Care of the Adult II"
+        },
+        {
+          "days": [
+            "T",
+            "W"
+          ],
+          "start": "09:30",
+          "end": "10:50",
+          "course": "NUR 4535",
+          "title": "Psychiatric Mental Health Nursing"
         },
         {
           "days": [
@@ -19992,15 +20041,6 @@
           "end": "13:20",
           "course": "ACG 3141",
           "title": "Intermediate Financial Accounting II"
-        },
-        {
-          "days": [
-            "M"
-          ],
-          "start": "17:00",
-          "end": "19:50",
-          "course": "CLP 3302",
-          "title": "Clinical Psychology"
         },
         {
           "days": [
@@ -24830,6 +24870,21 @@
           "end": "14:20",
           "course": "PCB 3233L",
           "title": "Immunology Laboratory"
+        }
+      ]
+    },
+    "HS2-0205": {
+      "building": "HS2",
+      "room": "0205",
+      "slots": [
+        {
+          "days": [
+            "F"
+          ],
+          "start": "08:00",
+          "end": "09:50",
+          "course": "PCB 3703C",
+          "title": "Human Physiology"
         }
       ]
     },
