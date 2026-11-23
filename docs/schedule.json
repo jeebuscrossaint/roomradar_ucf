@@ -1,6 +1,6 @@
 {
   "term": "2261",
-  "scraped_at": "2026-11-16T20:44:26.792206",
+  "scraped_at": "2026-11-23T22:41:55.368042",
   "rooms": {
     "CB2-O201": {
       "building": "CB2",
@@ -3379,15 +3379,6 @@
           "end": "16:15",
           "course": "EEL 5825",
           "title": "Machine Learning and Pattern Recognition"
-        },
-        {
-          "days": [
-            "W"
-          ],
-          "start": "18:00",
-          "end": "20:50",
-          "course": "EIN 5108",
-          "title": "The Environment of Technical Organizations"
         },
         {
           "days": [
@@ -23159,7 +23150,7 @@
           "start": "15:00",
           "end": "16:15",
           "course": "PCB 5937",
-          "title": "ST: Advanced Inferences in Conservation Biology"
+          "title": "Special Topics"
         },
         {
           "days": [
